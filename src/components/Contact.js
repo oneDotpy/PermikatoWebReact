@@ -51,7 +51,7 @@ function Contact() {
 
         <div className="long-buttons">
           {/* Long buttons with links */}
-          <button className="long-btn" onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeL_kcuICXL3-oviwa2v3uSKU6nyDJSyx_j-cnSkeS6aj4SLQ/viewform', '_blank')}>
+          <button className="long-btn" onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfPVU7ZqCOWYzTwiGEuNd4O6k3dUFdt-ejJ5eqX6kmtBFClIw/viewform', '_blank')}>
             <img src={membershipIcon} alt="Counselling Permikato" />
             <span>PERMIKATO Counselling Form</span>
           </button>

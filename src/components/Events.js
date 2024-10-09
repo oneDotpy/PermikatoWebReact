@@ -87,25 +87,26 @@ function Events() {
         <button className="events-next-button" onClick={handleNext}>→</button>
       )}
 
-      {isFocused && focusedEvent && (
-        <div className="events-focus-modal">
-        <div className="events-modal-content">
-          <button className="events-close-button" onClick={handleCloseFocus}>✖</button>
-          <img src={focusedEvent.image} alt={focusedEvent.title} />
-          <h2>{focusedEvent.title}</h2>
-          <p>{focusedEvent.description}</p>
+{isFocused && focusedEvent && (
+  <div className={`events-focus-modal ${isFocused ? 'show' : ''}`}>
+    <div className="events-modal-content">
+      <button className="events-close-button" onClick={handleCloseFocus}>✖</button>
+      <img src={focusedEvent.image} alt={focusedEvent.title} />
+      <h2>{focusedEvent.title}</h2>
+      <p>{focusedEvent.description}</p>
       
-          {focusedEvent.galleryLink !== '' && (
-            <button
-              className="events-gallery-button"
-              onClick={() => window.open(focusedEvent.galleryLink, '_blank')}
-            >
-              View Photo Gallery
-            </button>
-          )}
-        </div>
-      </div>      
+      {focusedEvent.galleryLink !== '' && (
+        <button
+          className="events-gallery-button"
+          onClick={() => window.open(focusedEvent.galleryLink, '_blank')}
+        >
+          View Photo Gallery
+        </button>
       )}
+    </div>
+  </div>
+)}
+
     </section>
   );
 }

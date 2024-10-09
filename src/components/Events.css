@@ -106,6 +106,16 @@
   align-items: center;
   z-index: 1000;
   padding: 20px;
+  opacity: 0; /* Initial hidden state */
+  transform: scale(0.1); /* Initial smaller scale */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.events-focus-modal.show {
+  opacity: 1; /* Full visibility */
+  transform: scale(1); /* Normal scale */
+  pointer-events: auto; /* Allow interaction when shown */
 }
 
 .events-modal-content {

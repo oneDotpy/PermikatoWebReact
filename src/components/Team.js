@@ -17,7 +17,16 @@ function Team() {
     {
       image: black,
       title: "PERMIKATO EXECUTIVES 2024/2025",
-      members: [""],
+      members: ["Swipe →"],
+    },
+    {
+      image: exec,
+      title: "CORE EXECUTIVES",
+      members: [
+        "Gabriel Reyes Situmeang - President",
+        "Dimas Anindito Widjanarko - Vice President",
+        "Ariella Maharani Phalosa Panjomuran Siahaan - Secretary",
+      ],
     },
     {
       image: rso,
