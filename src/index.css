@@ -1,0 +1,37 @@
+/* src/index.css */
+
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../assets/fonts/GlacialIndifference-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference Bold';
+  src: url('../assets/fonts/GlacialIndifference-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Glacial Indifference', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #d9d9d9;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Additional styles for scrollbars, if needed */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}

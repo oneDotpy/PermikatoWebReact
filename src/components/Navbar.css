@@ -1,0 +1,91 @@
+/* Navigation Bar */
+nav {
+  color: white;
+  padding: 1em 2em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: rgba(252, 246, 241, 0.6);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease; 
+}
+
+nav img {
+  height: 60px;
+  margin-right: 20px;
+  cursor: pointer; /* Add pointer to indicate clickable logo */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  position: relative;
+  font-family: 'Glacial Indifference', sans-serif;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--underline-color, rgb(0, 0, 0));
+  transition: width .3s;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Hide Home link on mobile and delegate it to the logo */
+@media (max-width: 600px) {
+  nav {
+    padding: 0.8em 1em;
+  }
+
+  nav img {
+    height: 40px;
+    margin-right: 1px;
+    margin-left: -7px;
+  }
+
+  nav ul li {
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+  }
+
+  .nav ul {
+    padding: 0;
+  }
+
+  /* Hide the Home link */
+  .home-link {
+    display: none;
+  }
+}

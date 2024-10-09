@@ -1,0 +1,110 @@
+/* Contact Section Styles */
+.contact-section {
+  background-color: #18191a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  color: white;
+  text-align: center;
+}
+
+.contact-section .content-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure icons wrap on smaller screens */
+  gap: 20px;
+  margin-bottom: 2em;
+}
+
+.social-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.social-btn img {
+  width: 40px; /* Increased for better visibility */
+  height: 40px;
+}
+
+/* Long Buttons */
+.long-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.long-btn {
+  background-color: #0f0f10;
+  color: white;
+  font-family: 'Glacial Indifference - Regular', sans-serif;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 30px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.long-btn img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.long-btn:hover {
+  background-color: #28292b;
+}
+
+.long-btn span {
+  flex: 1;
+  text-align: center;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .contact-section h1 {
+    font-size: 1.8em; /* Smaller heading */
+  }
+
+  .social-icons {
+    gap: 5px; /* Reduce gap between icons */
+  }
+
+  .social-btn img {
+    width: 20px; /* Smaller icons for mobile */
+    height: 20px;
+  }
+
+  .long-btn {
+    font-size: 1em; /* Adjust text size for mobile */
+    padding: 0.8em; /* Adjust padding */
+  }
+
+  .long-btn img {
+    width: 25px; /* Smaller icon for mobile */
+    height: 25px;
+  }
+
+  .content-container {
+    padding: 1em; /* Adjust padding for mobile */
+  }
+}

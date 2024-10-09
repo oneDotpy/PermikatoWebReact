@@ -1,0 +1,198 @@
+/* Full-Page Event Section */
+.events-section {
+  background-color: #8B0000;
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 2em;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent y-axis overflow */
+}
+
+.events-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+/* Slider container */
+.events-slider-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  scroll-snap-type: x mandatory; /* Enable snapping */
+  width: 90vw; /* Full width of the container with space for arrows */
+  padding: 0 4em; /* Add padding on sides for arrows */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.events-slide-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding */
+  gap: 20px; /* Spacing between slides */
+}
+
+.events-slide {
+  width: calc(100vw / 3 - 120px); /* Ensure 3 slides fit with the gap included */
+  height: 500px; /* Let height adjust naturally */
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  margin: 0;
+  transition: transform 0.3s ease-in-out;
+  scroll-snap-align: center; /* Snap each slide into center */
+  overflow-y: hidden;
+}
+
+.events-slide img {
+  width: 110%;
+  height: auto; /* Adjust height based on image ratio */
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.events-slide.active {
+}
+
+.event-title {
+  margin-top: 440px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: auto;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+
+/* Navigation Buttons */
+.events-prev-button, .events-next-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute; /* Always visible */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* On top of the slides */
+}
+
+.events-prev-button {
+  left: 10px;
+}
+
+.events-next-button {
+  right: 10px;
+}
+
+/* Focus Modal */
+.events-focus-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.events-modal-content {
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+
+.events-modal-content img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.events-close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.events-gallery-button {
+  background-color: #A52A2A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.events-gallery-button:hover {
+  background-color: #8B0000;
+}
+
+/* Mobile: Hide buttons, allow scroll */
+@media (max-width: 768px) {
+  .events-prev-button, .events-next-button {
+    display: none; /* Hide next and prev buttons on mobile */
+  }
+
+  .events-slider-container {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 0; /* Remove padding to avoid space on the left */
+    /* justify-content: center; Center content in mobile */
+  }
+
+  .events-slide {
+    width: calc(100vw / 1.2); /* Adjust to make it fit better on smaller screens */
+  }
+}
+
+/* Modal Scroll Adjustment */
+.events-focus-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto; /* Enable scrolling in the modal */
+}
+
+.events-modal-content {
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  max-width: 90%;
+  max-height: 90%;
+  margin-right: 40px;
+  position: relative;
+  overflow-y: auto; /* Enable scrolling inside the modal */
+  padding: 20px;
+}
+

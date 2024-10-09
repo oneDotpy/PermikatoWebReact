@@ -1,0 +1,37 @@
+/* Banner Section Styles */
+.banner-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('../assets/svg/background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw; /* Prevent elements from exceeding viewport width */
+  overflow-x: hidden; /* Prevent horizontal overflow within sections */
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+/* Interactive Logo */
+#interactive-logo {
+  width: 90%;
+  max-width: 1300px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  #interactive-logo {
+    width: 70%;
+  }
+  
+}
