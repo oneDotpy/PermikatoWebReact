@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PermikatoWebReact/static/css/main.a2eedd76.css",
-    "main.js": "/PermikatoWebReact/static/js/main.43827f3d.js",
+    "main.css": "/PermikatoWebReact/static/css/main.18819642.css",
+    "main.js": "/PermikatoWebReact/static/js/main.de14bfe7.js",
     "static/media/welpar.jpg": "/PermikatoWebReact/static/media/welpar.0a2117e1ddf289a9467c.jpg",
     "static/media/ea.jpg": "/PermikatoWebReact/static/media/ea.8fe600e10044934f6e38.jpg",
     "static/media/se.jpg": "/PermikatoWebReact/static/media/se.46bf630858e7627bc27d.jpg",
@@ -23,11 +23,11 @@
     "static/media/instagram.png": "/PermikatoWebReact/static/media/instagram.276112aa92beaf85df8f.png",
     "static/media/email.png": "/PermikatoWebReact/static/media/email.84b8241a1faf11ab3bb5.png",
     "index.html": "/PermikatoWebReact/index.html",
-    "main.a2eedd76.css.map": "/PermikatoWebReact/static/css/main.a2eedd76.css.map",
-    "main.43827f3d.js.map": "/PermikatoWebReact/static/js/main.43827f3d.js.map"
+    "main.18819642.css.map": "/PermikatoWebReact/static/css/main.18819642.css.map",
+    "main.de14bfe7.js.map": "/PermikatoWebReact/static/js/main.de14bfe7.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2eedd76.css",
-    "static/js/main.43827f3d.js"
+    "static/css/main.18819642.css",
+    "static/js/main.de14bfe7.js"
   ]
 }
