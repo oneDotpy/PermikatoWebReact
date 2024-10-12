@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PermikatoWebReact/static/css/main.596ff8a6.css",
+    "main.css": "/PermikatoWebReact/static/css/main.96b291c2.css",
     "main.js": "/PermikatoWebReact/static/js/main.c8c3de30.js",
     "static/media/welpar.jpg": "/PermikatoWebReact/static/media/welpar.0a2117e1ddf289a9467c.jpg",
     "static/media/ea.jpg": "/PermikatoWebReact/static/media/ea.8fe600e10044934f6e38.jpg",
@@ -24,11 +24,11 @@
     "static/media/instagram.png": "/PermikatoWebReact/static/media/instagram.276112aa92beaf85df8f.png",
     "static/media/email.png": "/PermikatoWebReact/static/media/email.84b8241a1faf11ab3bb5.png",
     "index.html": "/PermikatoWebReact/index.html",
-    "main.596ff8a6.css.map": "/PermikatoWebReact/static/css/main.596ff8a6.css.map",
+    "main.96b291c2.css.map": "/PermikatoWebReact/static/css/main.96b291c2.css.map",
     "main.c8c3de30.js.map": "/PermikatoWebReact/static/js/main.c8c3de30.js.map"
   },
   "entrypoints": [
-    "static/css/main.596ff8a6.css",
+    "static/css/main.96b291c2.css",
     "static/js/main.c8c3de30.js"
   ]
 }
