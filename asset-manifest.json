@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PermikatoWebReact/static/css/main.18819642.css",
-    "main.js": "/PermikatoWebReact/static/js/main.de14bfe7.js",
+    "main.css": "/PermikatoWebReact/static/css/main.596ff8a6.css",
+    "main.js": "/PermikatoWebReact/static/js/main.c8c3de30.js",
     "static/media/welpar.jpg": "/PermikatoWebReact/static/media/welpar.0a2117e1ddf289a9467c.jpg",
     "static/media/ea.jpg": "/PermikatoWebReact/static/media/ea.8fe600e10044934f6e38.jpg",
     "static/media/se.jpg": "/PermikatoWebReact/static/media/se.46bf630858e7627bc27d.jpg",
@@ -10,6 +10,7 @@
     "static/media/exec.jpg": "/PermikatoWebReact/static/media/exec.7b9f9941e88ce9addeaa.jpg",
     "static/media/itmp.jpg": "/PermikatoWebReact/static/media/itmp.1bafc12775e1d2129866.jpg",
     "static/media/finance.jpg": "/PermikatoWebReact/static/media/finance.a7a8333a25e207556873.jpg",
+    "static/media/kjri.png": "/PermikatoWebReact/static/media/kjri.bda3d2c9c667a86f7a2f.png",
     "static/media/background.svg": "/PermikatoWebReact/static/media/background.83001ab74b605465dede.svg",
     "static/media/halloween.png": "/PermikatoWebReact/static/media/halloween.dbe10f574a0f5047c61d.png",
     "static/media/tiktok.png": "/PermikatoWebReact/static/media/tiktok.960b311d90459eb1e40c.png",
@@ -23,11 +24,11 @@
     "static/media/instagram.png": "/PermikatoWebReact/static/media/instagram.276112aa92beaf85df8f.png",
     "static/media/email.png": "/PermikatoWebReact/static/media/email.84b8241a1faf11ab3bb5.png",
     "index.html": "/PermikatoWebReact/index.html",
-    "main.18819642.css.map": "/PermikatoWebReact/static/css/main.18819642.css.map",
-    "main.de14bfe7.js.map": "/PermikatoWebReact/static/js/main.de14bfe7.js.map"
+    "main.596ff8a6.css.map": "/PermikatoWebReact/static/css/main.596ff8a6.css.map",
+    "main.c8c3de30.js.map": "/PermikatoWebReact/static/js/main.c8c3de30.js.map"
   },
   "entrypoints": [
-    "static/css/main.18819642.css",
-    "static/js/main.de14bfe7.js"
+    "static/css/main.596ff8a6.css",
+    "static/js/main.c8c3de30.js"
   ]
 }
