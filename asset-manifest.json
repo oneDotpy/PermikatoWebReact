@@ -1,8 +1,17 @@
 {
   "files": {
-    "main.css": "/PermikatoWebReact/static/css/main.96b291c2.css",
-    "main.js": "/PermikatoWebReact/static/js/main.c8c3de30.js",
+    "main.css": "/PermikatoWebReact/static/css/main.101ed9d3.css",
+    "main.js": "/PermikatoWebReact/static/js/main.ed3e9ef7.js",
+    "static/media/spookseek.JPG": "/PermikatoWebReact/static/media/spookseek.8deef61d38d1aa30ca7f.JPG",
+    "static/media/IMG_7367.JPG": "/PermikatoWebReact/static/media/IMG_7367.d11dfcbe2bb8f843de4c.JPG",
+    "static/media/DSCF0235.jpg": "/PermikatoWebReact/static/media/DSCF0235.0682d15727afafa80e68.jpg",
+    "static/media/IMG_7351.JPG": "/PermikatoWebReact/static/media/IMG_7351.7e6a73582af340021720.JPG",
+    "static/media/IMG_7352.JPG": "/PermikatoWebReact/static/media/IMG_7352.d2d5ebdc790b1c66afc5.JPG",
     "static/media/welpar.jpg": "/PermikatoWebReact/static/media/welpar.0a2117e1ddf289a9467c.jpg",
+    "static/media/DSCF0213.jpg": "/PermikatoWebReact/static/media/DSCF0213.ec86d78dfcb3675fafd4.jpg",
+    "static/media/tiff.jpg": "/PermikatoWebReact/static/media/tiff.ec86d78dfcb3675fafd4.jpg",
+    "static/media/DSCF0168.jpg": "/PermikatoWebReact/static/media/DSCF0168.6eb8102d095d1e9d30cb.jpg",
+    "static/media/munk.jpg": "/PermikatoWebReact/static/media/munk.6eb8102d095d1e9d30cb.jpg",
     "static/media/ea.jpg": "/PermikatoWebReact/static/media/ea.8fe600e10044934f6e38.jpg",
     "static/media/se.jpg": "/PermikatoWebReact/static/media/se.46bf630858e7627bc27d.jpg",
     "static/media/esd.jpg": "/PermikatoWebReact/static/media/esd.bf0a1d0448fed66a4dee.jpg",
@@ -10,11 +19,24 @@
     "static/media/exec.jpg": "/PermikatoWebReact/static/media/exec.7b9f9941e88ce9addeaa.jpg",
     "static/media/itmp.jpg": "/PermikatoWebReact/static/media/itmp.1bafc12775e1d2129866.jpg",
     "static/media/finance.jpg": "/PermikatoWebReact/static/media/finance.a7a8333a25e207556873.jpg",
+    "static/media/humber.png": "/PermikatoWebReact/static/media/humber.d0d8ad67dd0c2c93b381.png",
+    "static/media/tmuisa.png": "/PermikatoWebReact/static/media/tmuisa.c6189f85437648a1dc84.png",
     "static/media/kjri.png": "/PermikatoWebReact/static/media/kjri.bda3d2c9c667a86f7a2f.png",
+    "static/media/uw.jpg": "/PermikatoWebReact/static/media/uw.95c746e8446c720c3642.jpg",
+    "static/media/tmu.jpg": "/PermikatoWebReact/static/media/tmu.aab9fcc82ad104ea04dd.jpg",
+    "static/media/isahumber.png": "/PermikatoWebReact/static/media/isahumber.7fd6fb384ceb3f808b1a.png",
+    "static/media/idnsa.png": "/PermikatoWebReact/static/media/idnsa.872b2cb3b84afe5f4382.png",
     "static/media/background.svg": "/PermikatoWebReact/static/media/background.83001ab74b605465dede.svg",
+    "static/media/utisa.png": "/PermikatoWebReact/static/media/utisa.9b3418cfadad2f47dd48.png",
+    "static/media/gta.jpg": "/PermikatoWebReact/static/media/gta.e73d5089012b4aaf8c50.jpg",
+    "static/media/utsg.jpg": "/PermikatoWebReact/static/media/utsg.5e30afeec2c397cacb75.jpg",
     "static/media/halloween.png": "/PermikatoWebReact/static/media/halloween.dbe10f574a0f5047c61d.png",
+    "static/media/isautm.png": "/PermikatoWebReact/static/media/isautm.67ff404cf150320438d3.png",
+    "static/media/uwisa.png": "/PermikatoWebReact/static/media/uwisa.22ec5688265bcdd08989.png",
     "static/media/tiktok.png": "/PermikatoWebReact/static/media/tiktok.960b311d90459eb1e40c.png",
     "static/media/home_logo.png": "/PermikatoWebReact/static/media/home_logo.8a03d5e67a074bed36b3.png",
+    "static/media/utm.jpg": "/PermikatoWebReact/static/media/utm.ae6d6197b4f3a826aa13.jpg",
+    "static/media/utsc.jpg": "/PermikatoWebReact/static/media/utsc.ca3d187ec6ed16046d8d.jpg",
     "static/media/sports.png": "/PermikatoWebReact/static/media/sports.570f287aa7392160c055.png",
     "static/media/navbarlogo_black.png": "/PermikatoWebReact/static/media/navbarlogo_black.e6196524c217b438c13e.png",
     "static/media/GlacialIndifference-Regular.otf": "/PermikatoWebReact/static/media/GlacialIndifference-Regular.663a1c12d079e631b0b2.otf",
@@ -22,13 +44,14 @@
     "static/media/threads.png": "/PermikatoWebReact/static/media/threads.3747aee21d37a1381c06.png",
     "static/media/GlacialIndifference-Bold.otf": "/PermikatoWebReact/static/media/GlacialIndifference-Bold.c085c7b0e486e3c99b11.otf",
     "static/media/instagram.png": "/PermikatoWebReact/static/media/instagram.276112aa92beaf85df8f.png",
+    "static/media/arrow.png": "/PermikatoWebReact/static/media/arrow.658568bcb57d78677544.png",
     "static/media/email.png": "/PermikatoWebReact/static/media/email.84b8241a1faf11ab3bb5.png",
     "index.html": "/PermikatoWebReact/index.html",
-    "main.96b291c2.css.map": "/PermikatoWebReact/static/css/main.96b291c2.css.map",
-    "main.c8c3de30.js.map": "/PermikatoWebReact/static/js/main.c8c3de30.js.map"
+    "main.101ed9d3.css.map": "/PermikatoWebReact/static/css/main.101ed9d3.css.map",
+    "main.ed3e9ef7.js.map": "/PermikatoWebReact/static/js/main.ed3e9ef7.js.map"
   },
   "entrypoints": [
-    "static/css/main.96b291c2.css",
-    "static/js/main.c8c3de30.js"
+    "static/css/main.101ed9d3.css",
+    "static/js/main.ed3e9ef7.js"
   ]
 }
