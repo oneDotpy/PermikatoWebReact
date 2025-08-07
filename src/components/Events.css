@@ -1,7 +1,7 @@
 /* Full-Page Event Section */
 .events-section {
   background-color: #8B0000;
-  min-height: 100vh; /* Full height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,8 +15,15 @@
 }
 
 .events-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 1.5em;
+  font-family: 'BlackHanSans-Regular', serif;
+  font-size: 3em;
+  margin-bottom: 2em;
+}
+
+.events-section p {
+  font-size: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 /* Slider container */
@@ -39,7 +46,7 @@
 }
 
 .events-slide {
-  width: calc(100vw / 3 - 120px); /* Ensure 3 slides fit with the gap included */
+  flex: 0 0 calc(100% / 3 - 1%); /* Each slide takes 1/3rd of container */
   height: 500px; /* Let height adjust naturally */
   background-size: cover;
   background-position: center;
@@ -48,6 +55,7 @@
   transition: transform 0.3s ease-in-out;
   scroll-snap-align: center; /* Snap each slide into center */
   overflow-y: hidden;
+  cursor: pointer;
 }
 
 .events-slide img {
@@ -135,16 +143,20 @@
   border-radius: 10px;
 }
 
+/* Close Button - Sticky to top right of the screen */
 .events-close-button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: fixed; /* Make it fixed to the screen */
+  padding-right: 50px;
+  top: 20px;       /* Set a top margin */
+  right: 20px;     /* Set a right margin */
   background: none;
   border: none;
   font-size: 1.5em;
   color: white;
   cursor: pointer;
+  z-index: 1100;  /* Ensure it's above other content */
 }
+
 
 .events-gallery-button {
   background-color: #A52A2A;
@@ -163,19 +175,25 @@
 
 /* Mobile: Hide buttons, allow scroll */
 @media (max-width: 768px) {
+  .events-section h1 {
+    font-size: 2em;
+  }
+
   .events-prev-button, .events-next-button {
-    display: none; /* Hide next and prev buttons on mobile */
+    display: none; /* Hide arrows */
   }
 
   .events-slider-container {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding: 0; /* Remove padding to avoid space on the left */
-    /* justify-content: center; Center content in mobile */
+    padding: 0;
   }
 
   .events-slide {
-    width: calc(100vw / 1.2); /* Adjust to make it fit better on smaller screens */
+    flex: unset; /* Disable flex behavior */
+    width: calc(90vw); /* Mobile: big clean tiles */
+    margin: 0 5vw; /* Center it horizontally */
+    scroll-snap-align: center;
   }
 }
 

@@ -1,0 +1,152 @@
+/* Footer Contact Section */
+.contact-foot-section {
+  background-color: #18191a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2em;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto; /* Centers the section */
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 30px; /* Balanced spacing */
+}
+
+/* Long Buttons (Left Side) */
+.long-buttons-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.long-btn-foot {
+  background-color: #0f0f10;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 30px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.long-btn-foot img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.long-btn-foot:hover {
+  background-color: #28292b;
+}
+
+.long-btn-foot span {
+  flex: 1;
+  text-align: center;
+}
+
+/* Contact Info (Right Side) */
+.contact-info-foot {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-info-foot h2 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 0.5em;
+}
+
+.contact-info-foot p {
+  font-size: 1em;
+  margin: 0.3em 0;
+}
+
+.contact-email-foot {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-email-foot:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons-foot {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1em;
+}
+
+.social-btn-foot {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-btn-foot img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-btn-foot:hover img {
+  transform: scale(1.3); /* Enlarges when hovered */
+  filter: brightness(1.2);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .contact-foot-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 1.5em;
+  }
+
+  .long-buttons-foot,
+  .contact-info-foot {
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .long-btn-foot {
+    max-width: 100%;
+    font-size: 1em;
+    padding: 0.8em;
+  }
+
+  .social-icons-foot {
+    gap: 5px;
+  }
+
+  .social-btn-foot img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social-btn-foot:hover img {
+    transform: scale(1.2); /* Slightly smaller zoom for mobile */
+  }
+}

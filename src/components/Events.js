@@ -1,34 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Papa from 'papaparse';
 import './Events.css';
-import welpar from '../assets/png/events/welpar.jpg';
-import halloween from '../assets/png/events/halloween.png';
-import sports from '../assets/png/events/sports.png';
 
-const events = [
-  {
-    image: welpar,
-    title: 'Welcoming Party',
-    description: 'Join us for the welcoming party where new members get to meet and have fun!',
-    galleryLink: 'https://drive.google.com/drive/folders/1OjPia7t58Utjm1txrbLjVONlgLqYCXfq',
-  },
-  {
-    image: halloween,
-    title: 'Halloween Night',
-    description: 'Coming Soon...',
-    galleryLink: '',
-  },
-  {
-    image: sports,
-    title: 'Sports Day',
-    description: 'Coming Soon...',
-    galleryLink: '',
-  },
-];
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQvx5UO9CVXqc06OmTxGJZTG90ml0CpElXPpNhYZtMdcF4yJJ4BjVUJUz76is0YzAf5RTwJpAI3a3jQ/pub?output=csv';
 
 function Events() {
+  const [events, setEvents] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isFocused, setIsFocused] = useState(false);
   const [focusedEvent, setFocusedEvent] = useState(null);
+
+  useEffect(() => {
+    Papa.parse(SHEET_URL, {
+      download: true,
+      header: true,
+      complete: (result) => {
+        setEvents(result.data);
+      }
+    });
+  }, []);
 
   const handleNext = () => {
     if (currentSlide < events.length - 3) {
@@ -45,24 +35,23 @@ function Events() {
   const handleImageClick = (index) => {
     setFocusedEvent(events[index]);
     setIsFocused(true);
-    document.body.style.overflow = 'hidden'; // Prevent background scroll when modal is open
+    document.body.style.overflow = 'hidden';
   };
 
   const handleCloseFocus = () => {
     setIsFocused(false);
     setFocusedEvent(null);
-    document.body.style.overflow = ''; // Allow background scroll again
+    document.body.style.overflow = '';
   };
 
   return (
     <section id="events" className="events-section">
-      <h1>Our Events</h1>
-      
-      {/* Arrows are now outside the slider container */}
+      <h1>Our programs</h1>
+
       {!isFocused && currentSlide > 0 && (
         <button className="events-prev-button" onClick={handlePrev}>←</button>
       )}
-      
+
       <div className="events-slider-container">
         <div
           className="events-slide-container"
@@ -87,26 +76,31 @@ function Events() {
         <button className="events-next-button" onClick={handleNext}>→</button>
       )}
 
-{isFocused && focusedEvent && (
-  <div className={`events-focus-modal ${isFocused ? 'show' : ''}`}>
-    <div className="events-modal-content">
-      <button className="events-close-button" onClick={handleCloseFocus}>✖</button>
-      <img src={focusedEvent.image} alt={focusedEvent.title} />
-      <h2>{focusedEvent.title}</h2>
-      <p>{focusedEvent.description}</p>
-      
-      {focusedEvent.galleryLink !== '' && (
-        <button
-          className="events-gallery-button"
-          onClick={() => window.open(focusedEvent.galleryLink, '_blank')}
-        >
-          View Photo Gallery
-        </button>
-      )}
-    </div>
-  </div>
-)}
+      <p>Scroll and click each program for more info!</p>
 
+      {isFocused && focusedEvent && (
+        <div className={`events-focus-modal ${isFocused ? 'show' : ''}`}>
+          <div className="events-modal-content">
+            <button className="events-close-button" onClick={handleCloseFocus}>✖</button>
+            <img 
+              src={focusedEvent.image} 
+              alt={focusedEvent.title} 
+              loading='lazy'
+            />
+            <h2>{focusedEvent.title}</h2>
+            <p>{focusedEvent.description}</p>
+
+            {focusedEvent.galleryLink && focusedEvent.galleryLink !== '' && (
+              <button
+                className="events-gallery-button"
+                onClick={() => window.open(focusedEvent.galleryLink, '_blank')}
+              >
+                View Photo Gallery
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

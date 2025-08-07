@@ -15,6 +15,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'BlackHanSans-Regular';
+  src: url('../assets/fonts/BlackHanSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Global Styles */
 body {
   font-family: 'Glacial Indifference', sans-serif;

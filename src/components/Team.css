@@ -47,7 +47,7 @@
 }
 
 .overlay h1 {
-  font-family: 'Glacial Indifference - Bold', sans-serif;
+  font-family: 'BlackHanSans-Regular', serif;
   font-size: 2.5em;
   margin: 0;
   padding: 0 1em;
@@ -55,7 +55,7 @@
 }
 
 .team-members p {
-  font-family: 'Glacial Indifference - Regular', sans-serif;
+  font-family: 'Glacial Indifference - Bold', sans-serif;
   font-size: 1.2em;
   color: white;
   margin: 5px 0;
@@ -89,6 +89,7 @@
   }
 
   .overlay h1 {
+    font-family: 'BlackHanSans-Regular', serif;
     font-size: 1.8em; /* Smaller heading size */
     padding: 0 10px; /* Add padding to prevent text overflow */
   }
@@ -108,4 +109,3 @@
     scroll-snap-align: start; /* Snap to each slide */
   }
 }
-

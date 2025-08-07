@@ -1,0 +1,92 @@
+.execs-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #fcf6f1;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.execs-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 17vh;
+  font-family: 'BlackHanSans-Regular', serif;
+}
+
+.execs-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.year-selector label {
+  color: black;
+}
+
+.execs-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.execs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exec-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.exec-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.exec-info {
+  padding: 10px 0;
+}
+
+.exec-info h3 {
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
+
+.exec-info p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .execs-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .execs-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 0 10px;
+  }
+}
