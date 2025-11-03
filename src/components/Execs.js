@@ -73,6 +73,10 @@ const DIVISION_RULES = {
       titles: ['President', 'Vice President'],
     },
     {
+      division: 'Events',
+      titles: ['Head of Event', 'Event Associate'],
+    },
+    {
       division: 'External Affairs',
       titles: ['Head of External Affairs', 'External Affairs Associate'],
     },
@@ -97,10 +101,6 @@ const DIVISION_RULES = {
         'Head of Research, Strategy, and Operations',
         'Research Strategy, and Operations Associate',
       ],
-    },
-    {
-      division: 'Events',
-      titles: ['Head of Event', 'Event Associate'],
     },
   ],
 };
