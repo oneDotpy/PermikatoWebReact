@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Papa from 'papaparse';
 import './Execs.css';
 
-/* Uses your exact Google Sheets CSV */
+/* Your exact Google Sheets CSV */
 const SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vRah_tCFZe8QB6HJ14l1K5qym0P4qADtwvtHHdzApUT49Tc8AioJUv7LohNFn6guL-G-QOcSWbyMVGV/pub?output=csv';
 
@@ -105,6 +105,13 @@ const DIVISION_RULES = {
   ],
 };
 
+/* Create a safe id from division name for anchors */
+const slug = (s) =>
+  norm(s)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
 /* --------------------------- Component ---------------------------- */
 
 function Execs() {
@@ -158,11 +165,12 @@ function Execs() {
     // Prepare buckets in configured order
     const buckets = rules.map(({ division, titles }) => ({
       division,
+      id: slug(division),
       titles,
       members: [],
     }));
 
-    // Assign people to buckets if their title matches a division
+    // Assign people to buckets if their title matches
     people.forEach((p) => {
       const d = titleToDivision.get(norm(p.title).toLowerCase());
       if (!d) return;
@@ -170,7 +178,7 @@ function Execs() {
       if (bucket) bucket.members.push(p);
     });
 
-    // Sort members inside each bucket based on the title order, then by name
+    // Sort members inside each bucket based on title order, then by name
     buckets.forEach((b) => {
       const idx = makeTitleOrder(b.titles);
       b.members.sort((a, c) => {
@@ -181,15 +189,26 @@ function Execs() {
       });
     });
 
-    // Only render non-empty divisions
     return buckets.filter((b) => b.members.length > 0);
   }, [selectedYear, byYear]);
 
+  /* Scroll handler for the division chips */
+  const scrollToDivision = useCallback((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <div className="execs-container">
-      <h1 className="execs-title">Our Team</h1>
-      {selectedYear && <h2 className="execs-subtitle">{selectedYear}</h2>}
+      {/* Main heading and subtitle */}
+      <h1 className="execs-title">Our Committees</h1>
+      {selectedYear && (
+        <p className="execs-subtitle">PERMIKATO Committee {selectedYear}</p>
+      )}
 
+      {/* Year selector */}
       <div className="year-selector">
         <label htmlFor="year">Select Year:</label>
         <select
@@ -205,13 +224,27 @@ function Execs() {
         </select>
       </div>
 
-      {/* Render each division as a section */}
-      {divisions.map(({ division, members }) => (
-        <section key={division} style={{ width: '100%', marginTop: 28 }}>
-          <div style={{ textAlign: 'center', marginBottom: 10 }}>
-            <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 800 }}>
+      {/* Division chips (buttons) */}
+      {divisions.length > 0 && (
+        <div className="division-nav" role="navigation" aria-label="Divisions">
+          {divisions.map(({ division, id }) => (
+            <button
+              key={id}
+              type="button"
+              className="division-chip"
+              onClick={() => scrollToDivision(id)}
+            >
               {division}
-            </h3>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Render each division as a section with an anchor id */}
+      {divisions.map(({ division, id, members }) => (
+        <section key={id} id={id} className="division-section">
+          <div className="division-title-wrap">
+            <h3 className="division-title">{division}</h3>
           </div>
 
           <div className="execs-grid-wrapper">
