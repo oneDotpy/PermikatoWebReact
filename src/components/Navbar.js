@@ -211,7 +211,7 @@ function Navbar() {
           <div className="dropdown-trigger">
             <span>About Us ▾</span>
             <ul className="dropdown-content">
-            <li><Link to="/team" className="dropdown-link" onClick={handleNavClick}>Our Team</Link></li>
+            <li><Link to="/team" className="dropdown-link" onClick={handleNavClick}>Committees</Link></li>
             <li><Link to="/adart" className="dropdown-link" onClick={handleNavClick}>AD/ART</Link></li>
             </ul>
           </div>
@@ -224,7 +224,7 @@ function Navbar() {
       <div className={`full-screen-menu ${isMenuOpen ? 'visible' : ''}`}>
         <ul>
           <li><Link to="/" onClick={handleNavClick}>Home</Link></li>
-          <li><Link to="/team" onClick={handleNavClick}>Our Team</Link></li>
+          <li><Link to="/team" onClick={handleNavClick}>Committees</Link></li>
           <li><Link to="/adart" onClick={handleNavClick}>AD/ART</Link></li>
           <li><Link to="/survival-guide" onClick={handleNavClick}>Survival Guide</Link></li>
           <li><Link to="/news" onClick={handleNavClick}>News</Link></li>
