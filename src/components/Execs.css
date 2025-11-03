@@ -1,11 +1,12 @@
-/* === Overall Layout === */
+html { scroll-behavior: smooth; }
+
 .execs-container {
   --bg: #ffffff;
   --ink: #111827;
   --muted: #6b7280;
-  --accent: #233876;
-  --chip-bg: #e9eefc;
+  --accent: #A60101;       /* Updated button color */
   --card-radius: 14px;
+  --permikato-red: #A60101; /* For subtitle text */
 
   background: var(--bg);
   color: var(--ink);
@@ -18,7 +19,7 @@
 
 /* === Top Title === */
 .execs-title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
   text-align: center;
   margin-top: 12vh;
@@ -28,23 +29,22 @@
 .execs-title::after {
   content: "";
   display: block;
-  width: 140px;
+  width: 160px;
   height: 3px;
   background: #111827;
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   border-radius: 999px;
   opacity: 0.18;
 }
 
-/* === Year Subtitle === */
+/* === Subtitle === */
 .execs-subtitle {
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #374151;
-  margin-top: 6px;
-  margin-bottom: 22px;
+  font-size: 2rem;               /* Bigger subtitle */
+  font-weight: 800;
+  color: var(--permikato-red);
+  margin-top: 10px;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 /* === Year Selector === */
@@ -63,10 +63,8 @@
 }
 .year-selector select {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: var(--chip-bg);
-  border: 1px solid rgba(35, 56, 118, 0.25);
+  background: #f5f5f5;
+  border: 1px solid rgba(166, 1, 1, 0.4);
   color: #0f172a;
   padding: 10px 14px;
   border-radius: 999px;
@@ -76,69 +74,92 @@
   transition: box-shadow 0.2s ease, transform 0.06s ease;
 }
 .year-selector select:focus {
-  box-shadow: 0 0 0 4px rgba(35, 56, 118, 0.15);
+  box-shadow: 0 0 0 4px rgba(166, 1, 1, 0.15);
 }
 
-/* === Division Spacing & Title === */
-.execs-container section {
+/* === Division Buttons === */
+.division-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 8px auto 36px;
+  max-width: 1140px;
+  padding: 0 8px;
+}
+.division-chip {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, transform .06s ease;
+}
+.division-chip:hover,
+.division-chip:focus-visible {
+  background: #fff;
+  color: var(--accent);
+  outline: none;
+}
+
+/* === Division Section === */
+.division-section {
   width: 100%;
-  /* big space BEFORE each division title */
-  margin-top: 88px;
-  /* big space AFTER the grid so next title sits far below */
-  margin-bottom: 96px;
+  margin-top: 70px;   /* Reduced spacing */
+  margin-bottom: 70px;
+  scroll-margin-top: 100px;
 }
-.execs-container section:first-of-type {
-  margin-top: 48px;
+.division-title-wrap {
+  text-align: center;
+  margin-bottom: 8px;
 }
-.execs-container section > div > h3 {
-  font-size: 2rem;              /* bigger division titles */
+.division-title {
+  font-size: 2.3rem;
   font-weight: 800;
-  letter-spacing: 0.01em;
-  margin: 0 0 18px 0;
+  margin: 0 0 28px 0;
   position: relative;
 }
-.execs-container section > div > h3::after {
+.division-title::after {
   content: "";
   display: block;
-  width: 72px;
+  width: 80px;
   height: 3px;
   background: #111827;
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   border-radius: 999px;
   opacity: 0.18;
 }
 
-/* === Grid Layout (FLEX so the last row centers) === */
+/* === Grid Layout === */
 .execs-grid-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 .execs-grid {
   width: 100%;
   max-width: 1120px;
-  display: flex;                 /* ← switch to flexbox */
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;       /* ← centers every row, including the last one */
-  gap: 28px;                     /* both row & column gap */
+  justify-content: center;
+  gap: 32px;
   padding: 0 8px;
 }
 
-/* Fix card width so rows align nicely and last row centers cleanly */
+/* Cards */
 .exec-card {
-  width: 260px;                  /* ← fixed column width similar to grid tracks */
+  width: 260px;
   background: transparent;
   border-radius: var(--card-radius);
-  padding: 0;
   text-align: center;
   transition: transform 0.12s ease;
 }
-.exec-card:hover {
-  transform: translateY(-2px);
-}
+.exec-card:hover { transform: translateY(-2px); }
 
-/* === Image (keep original aspect ratio) === */
+/* Images */
 .exec-image {
   width: 100%;
   height: auto;
@@ -147,10 +168,8 @@
   object-fit: cover;
 }
 
-/* === Info Text === */
-.exec-info {
-  padding-top: 10px;
-}
+/* Captions */
+.exec-info { padding-top: 10px; }
 .exec-info h3 {
   margin: 6px 0 2px;
   font-size: 1rem;
@@ -159,21 +178,14 @@
 }
 .exec-info p {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--muted);
   font-style: italic;
 }
 
-/* === Responsive === */
-@media (max-width: 1200px) {
-  .exec-card { width: 240px; }
-  .execs-grid { gap: 24px; }
-}
+/* Responsive */
 @media (max-width: 640px) {
-  .execs-title {
-    margin-top: 9vh;
-    font-size: 1.6rem;
-  }
-  .exec-card { width: 100%; max-width: 440px; }
-  .execs-grid { gap: 20px; }
+  .execs-title { font-size: 2.2rem; }
+  .execs-subtitle { font-size: 1.4rem; }
+  .division-title { font-size: 1.8rem; }
 }
