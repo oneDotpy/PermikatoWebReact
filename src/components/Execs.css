@@ -1,92 +1,179 @@
+/* === Overall Layout === */
 .execs-container {
-  text-align: center;
-  padding: 40px;
-  background-color: #fcf6f1;
+  --bg: #ffffff;
+  --ink: #111827;
+  --muted: #6b7280;
+  --accent: #233876;
+  --chip-bg: #e9eefc;
+  --card-radius: 14px;
+
+  background: var(--bg);
+  color: var(--ink);
   min-height: 100vh;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 20px 80px;
 }
 
+/* === Top Title === */
 .execs-title {
   font-size: 2rem;
-  font-weight: bold;
-  color: black;
-  margin-top: 17vh;
-  font-family: 'BlackHanSans-Regular', serif;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 12vh;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+.execs-title::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 3px;
+  background: #111827;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  opacity: 0.18;
 }
 
+/* === Year Subtitle === */
 .execs-subtitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #374151;
+  margin-top: 6px;
+  margin-bottom: 22px;
 }
 
+/* === Year Selector === */
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 22px;
+}
 .year-selector label {
-  color: black;
+  font-weight: 600;
+  color: #111827;
+}
+.year-selector select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: var(--chip-bg);
+  border: 1px solid rgba(35, 56, 118, 0.25);
+  color: #0f172a;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.2s ease, transform 0.06s ease;
+}
+.year-selector select:focus {
+  box-shadow: 0 0 0 4px rgba(35, 56, 118, 0.15);
 }
 
+/* === Division Spacing & Title === */
+.execs-container section {
+  width: 100%;
+  /* big space BEFORE each division title */
+  margin-top: 88px;
+  /* big space AFTER the grid so next title sits far below */
+  margin-bottom: 96px;
+}
+.execs-container section:first-of-type {
+  margin-top: 48px;
+}
+.execs-container section > div > h3 {
+  font-size: 2rem;              /* bigger division titles */
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 0 0 18px 0;
+  position: relative;
+}
+.execs-container section > div > h3::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  background: #111827;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  opacity: 0.18;
+}
+
+/* === Grid Layout (FLEX so the last row centers) === */
 .execs-grid-wrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .execs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1120px;
+  display: flex;                 /* ← switch to flexbox */
+  flex-wrap: wrap;
+  justify-content: center;       /* ← centers every row, including the last one */
+  gap: 28px;                     /* both row & column gap */
+  padding: 0 8px;
 }
 
+/* Fix card width so rows align nicely and last row centers cleanly */
 .exec-card {
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 260px;                  /* ← fixed column width similar to grid tracks */
+  background: transparent;
+  border-radius: var(--card-radius);
+  padding: 0;
   text-align: center;
+  transition: transform 0.12s ease;
+}
+.exec-card:hover {
+  transform: translateY(-2px);
 }
 
+/* === Image (keep original aspect ratio) === */
 .exec-image {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  border-radius: var(--card-radius);
+  display: block;
+  object-fit: cover;
 }
 
+/* === Info Text === */
 .exec-info {
-  padding: 10px 0;
+  padding-top: 10px;
 }
-
 .exec-info h3 {
-  margin: 5px 0;
+  margin: 6px 0 2px;
   font-size: 1rem;
-  font-weight: bold;
-  color: black;
+  font-weight: 700;
+  color: #111827;
 }
-
 .exec-info p {
-  margin: 3px 0;
-  font-size: 0.9rem;
-  color: rgb(0, 0, 0);
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
 }
 
-@media (max-width: 768px) {
-  .execs-grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
-    max-width: 100%;
-    padding: 0 20px;
-  }
+/* === Responsive === */
+@media (max-width: 1200px) {
+  .exec-card { width: 240px; }
+  .execs-grid { gap: 24px; }
 }
-
-@media (max-width: 480px) {
-  .execs-grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    padding: 0 10px;
+@media (max-width: 640px) {
+  .execs-title {
+    margin-top: 9vh;
+    font-size: 1.6rem;
   }
+  .exec-card { width: 100%; max-width: 440px; }
+  .execs-grid { gap: 20px; }
 }
