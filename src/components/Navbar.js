@@ -211,7 +211,7 @@ function Navbar() {
           <div className="dropdown-trigger">
             <span>About Us ▾</span>
             <ul className="dropdown-content">
-            <li><Link to="/team" className="dropdown-link" onClick={handleNavClick}>Committees</Link></li>
+            <li><Link to="/team" className="dropdown-link" onClick={handleNavClick}>Our Team</Link></li>
             <li><Link to="/adart" className="dropdown-link" onClick={handleNavClick}>AD/ART</Link></li>
             </ul>
           </div>
