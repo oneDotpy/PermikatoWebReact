@@ -1,7 +1,7 @@
 html { scroll-behavior: smooth; }
 
 .execs-container {
-  --bg: #ffffff;
+  --bg: #fcf6f1;
   --ink: #111827;
   --muted: #6b7280;
   --accent: #A60101;       /* Updated button color */
@@ -92,9 +92,10 @@ html { scroll-behavior: smooth; }
   color: #fff;
   border: 1px solid var(--accent);
   border-radius: 999px;
-  padding: 10px 16px;
-  font-weight: 700;
-  font-size: 0.95rem;
+  padding: 9px 16px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  font-family: inherit;
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease, transform .06s ease;
 }
