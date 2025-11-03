@@ -187,7 +187,7 @@ function Execs() {
 
   return (
     <div className="execs-container">
-      <h1 className="execs-title">Our Committee</h1>
+      <h1 className="execs-title">Our Team</h1>
       {selectedYear && <h2 className="execs-subtitle">{selectedYear}</h2>}
 
       <div className="year-selector">
