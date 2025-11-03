@@ -203,7 +203,7 @@ function Execs() {
   return (
     <div className="execs-container">
       {/* Main heading and subtitle */}
-      <h1 className="execs-title">Our Committees</h1>
+      <h1 className="execs-title">Meet Our Committees</h1>
       {selectedYear && (
         <p className="execs-subtitle">PERMIKATO Committee {selectedYear}</p>
       )}
