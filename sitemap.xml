@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.permikato.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.permikato.com/team</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.permikato.com/adart</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.permikato.com/news</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.permikato.com/survival-guide</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.permikato.com/faq</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

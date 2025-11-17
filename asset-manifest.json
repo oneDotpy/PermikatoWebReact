@@ -1,20 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.f796e92b.css",
-    "main.js": "/static/js/main.be58124a.js",
+    "main.css": "/static/css/main.6105cc06.css",
+    "main.js": "/static/js/main.8edddf73.js",
     "static/media/dump2.JPG": "/static/media/dump2.9c9b6247bc5434d2663c.JPG",
     "static/media/dump1.JPG": "/static/media/dump1.5582ed871ea8a113620d.JPG",
     "static/media/dump10.JPG": "/static/media/dump10.d11dfcbe2bb8f843de4c.JPG",
     "static/media/dump4.jpg": "/static/media/dump4.caff72928c83a3e5e5a4.jpg",
     "static/media/dump11.jpg": "/static/media/dump11.a91e67d9865baf4cb983.jpg",
-    "static/media/dump7.jpg": "/static/media/dump7.0682d15727afafa80e68.jpg",
     "static/media/dump12.jpg": "/static/media/dump12.60140d7c2b392486a430.jpg",
-    "static/media/dump8.JPG": "/static/media/dump8.7e6a73582af340021720.JPG",
     "static/media/dump9.JPG": "/static/media/dump9.d2d5ebdc790b1c66afc5.JPG",
     "static/media/welpar.jpg": "/static/media/welpar.0a2117e1ddf289a9467c.jpg",
     "static/media/dump3.jpg": "/static/media/dump3.6908cd7dc74221889cb6.jpg",
     "static/media/dump6.jpg": "/static/media/dump6.ec86d78dfcb3675fafd4.jpg",
-    "static/media/dump5.jpg": "/static/media/dump5.6eb8102d095d1e9d30cb.jpg",
     "static/media/ea.jpg": "/static/media/ea.8fe600e10044934f6e38.jpg",
     "static/media/se.jpg": "/static/media/se.46bf630858e7627bc27d.jpg",
     "static/media/yorku.jpg": "/static/media/yorku.acb00e6d669b96411106.jpg",
@@ -53,11 +50,11 @@
     "static/media/arrow.png": "/static/media/arrow.658568bcb57d78677544.png",
     "static/media/email.png": "/static/media/email.84b8241a1faf11ab3bb5.png",
     "index.html": "/index.html",
-    "main.f796e92b.css.map": "/static/css/main.f796e92b.css.map",
-    "main.be58124a.js.map": "/static/js/main.be58124a.js.map"
+    "main.6105cc06.css.map": "/static/css/main.6105cc06.css.map",
+    "main.8edddf73.js.map": "/static/js/main.8edddf73.js.map"
   },
   "entrypoints": [
-    "static/css/main.f796e92b.css",
-    "static/js/main.be58124a.js"
+    "static/css/main.6105cc06.css",
+    "static/js/main.8edddf73.js"
   ]
 }
