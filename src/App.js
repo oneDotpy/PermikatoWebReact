@@ -11,6 +11,7 @@ import AdARTPage from "./pages/ADARTPage";
 import NewsPageFoot from "./pages/NewsPage";
 import SingleNews from "./components/SingleNews";
 import MembershipSteps from "./components/MembershipShips";
+import EventDetailPage from "./pages/EventDetailPage";
 
 function App() {
   return (
@@ -24,9 +25,8 @@ function App() {
         <Route path="/adart" element={<AdARTPage />} />
         <Route path="/news" element={<NewsPageFoot />} />
         <Route path="/news/:slug" element={<SingleNews />} />
-        <Route path="become-member" element={<MembershipSteps />} />
-
-        {/* Catch-all route for invalid paths */}
+        <Route path="/become-member" element={<MembershipSteps />} />
+        <Route path="/events/:slug" element={<EventDetailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

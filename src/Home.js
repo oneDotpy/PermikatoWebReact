@@ -1,19 +1,35 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import About from "./components/About";
 import Isa from "./components/Isa";
-import Team from "./components/Team";
-import Contact from "./components/Contact";
-import ContactFoot from "./components/ContactFoot";
 import Events from "./components/Events";
 import Dump from "./components/Dump";
-import Execs from "./components/Execs";
-import SurvivalGuide from "./components/SurvivalGuide"; // Import the new page
+import ContactFoot from "./components/ContactFoot";
 
 function Home() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "events") {
+      const eventSection = document.getElementById("events");
+
+      if (eventSection) {
+        setTimeout(() => {
+          eventSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+
+      navigate(".", { replace: true, state: {} });
+    }
+  }, [location, navigate]);
+
   return (
     <div className="Home">
       <Banner />

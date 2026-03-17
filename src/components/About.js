@@ -1,14 +1,56 @@
-// src/components/About.js
 import React from 'react';
 import './About.css';
 
 function About() {
   return (
     <section id="about" className="about-section">
-      <div className="content-container">
-        <h1>We are the Indonesian students of Toronto</h1>
-        <p>Perhimpunan Mahasiswa Indonesia di Kanada (Permika) Toronto is an Indonesian students association in Toronto, Canada. Based on our database of registered members, we accommodate 160+ Indonesian students dispersed in 9 colleges and universities in the Greater Toronto Area.</p>
-        <p>We aim to foster fruitful relationships between Indonesian students and the diaspora in Toronto, provide networking opportunities, support and nurture the talents and aspirations of the members, and initiate impactful actions within our community. Consisting of students from various post-secondary education levels and many programs, Permika Toronto is a student body of vibrant and diverse ideas. We strive to synergize the multidisciplinary backgrounds of our committee members into one robust force of the Indonesian Students Association.</p>
+      <div className="about-shell">
+        <div className="about-header">
+          <div className="about-heading-block">
+            <span className="about-eyebrow">About Permika Toronto</span>
+            <h2>We are the Indonesian students of Toronto</h2>
+          </div>
+
+          <p className="about-intro">
+            Permika Toronto is a student community that connects Indonesian
+            students across the Greater Toronto Area through friendship,
+            collaboration, and shared purpose.
+          </p>
+        </div>
+
+        <div className="about-content-grid">
+          <div className="about-highlight-card">
+            <div className="about-highlight-top">
+              <span className="about-mini-label">Community at a glance</span>
+              <h3>160+ students across 9 colleges and universities</h3>
+            </div>
+
+            <p>
+              Perhimpunan Mahasiswa Indonesia di Kanada (Permika) Toronto is an
+              Indonesian students association in Toronto, Canada. Based on our
+              database of registered members, we accommodate 160+ Indonesian
+              students dispersed in 9 colleges and universities in the Greater
+              Toronto Area.
+            </p>
+          </div>
+
+          <div className="about-text-card">
+            <span className="about-mini-label">What we stand for</span>
+            <p>
+              We aim to foster fruitful relationships between Indonesian
+              students and the diaspora in Toronto, provide networking
+              opportunities, support and nurture the talents and aspirations of
+              our members, and initiate impactful actions within our community.
+            </p>
+            <p>
+              Consisting of students from various post-secondary education
+              levels and many academic programs, Permika Toronto is a student
+              body of vibrant and diverse ideas. We strive to synergize the
+              multidisciplinary backgrounds of our committee members into one
+              robust force for the Indonesian student community.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
