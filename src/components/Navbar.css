@@ -1,10 +1,10 @@
 :root {
   --brand-red: #c40000;
   --brand-red-dark: #980000;
-  --nav-light-bg: rgba(255, 252, 250, 0.72);
+  --nav-light-bg: rgba(255, 252, 250, 0.78);
   --nav-light-border: rgba(35, 24, 21, 0.08);
   --nav-light-text: #181312;
-  --nav-dark-bg: rgba(196, 0, 0, 0.72);
+  --nav-dark-bg: rgba(196, 0, 0, 0.78);
   --nav-dark-border: rgba(255, 255, 255, 0.14);
   --nav-dark-text: #ffffff;
   --nav-shadow: 0 14px 36px rgba(23, 17, 16, 0.08);
@@ -15,7 +15,6 @@
   box-sizing: border-box;
 }
 
-/* Main navbar */
 .site-navbar {
   position: fixed;
   top: 1rem;
@@ -46,7 +45,6 @@
   transform: translateX(-50%) translateY(-140%);
 }
 
-/* Theme states */
 .navbar-theme-light {
   background: var(--nav-light-bg);
   border: 1px solid var(--nav-light-border);
@@ -59,10 +57,9 @@
 }
 
 .navbar-theme-dark {
-  background: rgba(28, 24, 24, 0.72);
+  background: rgba(28, 24, 24, 0.78);
 }
 
-/* Brand */
 .navbar-brand {
   display: inline-flex;
   align-items: center;
@@ -81,7 +78,6 @@
   transform: scale(1.03);
 }
 
-/* Desktop nav links */
 .nav-links {
   list-style: none;
   margin: 0;
@@ -109,13 +105,11 @@
   transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-/* Light theme link colors */
 .navbar-theme-light .nav-links li a,
 .navbar-theme-light .dropdown-trigger > span {
   color: var(--nav-light-text);
 }
 
-/* Dark/red theme link colors */
 .navbar-theme-dark .nav-links li a,
 .navbar-theme-dark .dropdown-trigger > span,
 .navbar-theme-red .nav-links li a,
@@ -123,7 +117,6 @@
   color: var(--nav-dark-text);
 }
 
-/* Elegant underline */
 .nav-links li a::after,
 .dropdown-trigger > span::after,
 .dropdown-link::after {
@@ -155,7 +148,6 @@
   color: var(--brand-red);
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -234,7 +226,6 @@
   background: var(--brand-red) !important;
 }
 
-/* Hamburger */
 .hamburger-button {
   display: none;
   width: 48px;
@@ -282,14 +273,13 @@
   transform: rotate(-45deg);
 }
 
-/* Mobile fullscreen menu */
+/* mobile menu base */
 .full-screen-menu {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, var(--brand-red-dark) 0%, var(--brand-red) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(20, 12, 12, 0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 900;
   opacity: 0;
   visibility: hidden;
@@ -307,33 +297,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-align: center;
-}
-
-.full-screen-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-family: "Glacial Indifference", sans-serif;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  transition: opacity 0.22s ease, transform 0.22s ease;
-}
-
-.full-screen-menu ul li a:hover,
-.full-screen-menu ul li a:focus {
-  opacity: 0.82;
-  transform: translateY(-2px);
 }
 
 body.menu-open {
   overflow: hidden;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .site-navbar {
     padding: 0.8rem 1rem;
@@ -354,6 +323,7 @@ body.menu-open {
     width: calc(100% - 1rem);
     top: 0.5rem;
     border-radius: 18px;
+    padding: 0.75rem 0.9rem;
   }
 
   .navbar-brand img {
@@ -368,5 +338,62 @@ body.menu-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* turn fullscreen into elegant dropdown panel */
+  .full-screen-menu {
+    display: block;
+    background: rgba(20, 12, 12, 0.18);
+  }
+
+  .full-screen-menu ul {
+    position: absolute;
+    top: 5.35rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-12px);
+    width: calc(100% - 1rem);
+    padding: 0.55rem;
+    border-radius: 22px;
+    background: rgba(255, 250, 248, 0.96);
+    border: 1px solid rgba(35, 24, 21, 0.08);
+    box-shadow: 0 24px 50px rgba(23, 17, 16, 0.14);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    opacity: 0;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+  }
+
+  .full-screen-menu.visible ul {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  .full-screen-menu ul li {
+    width: 100%;
+  }
+
+  .full-screen-menu ul li a {
+    width: 100%;
+    display: block;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    color: #181312;
+    text-decoration: none;
+    font-family: "Glacial Indifference", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: left;
+    transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+  }
+
+  .full-screen-menu ul li a:hover,
+  .full-screen-menu ul li a:focus {
+    background: rgba(196, 0, 0, 0.08);
+    color: var(--brand-red);
+    transform: translateX(2px);
   }
 }
