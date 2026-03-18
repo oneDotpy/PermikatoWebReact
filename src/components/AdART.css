@@ -1,17 +1,17 @@
-.survival-page,
-.survival-page * {
+.adart-page,
+.adart-page * {
   box-sizing: border-box;
 }
 
-.survival-page {
+.adart-page {
   --text: #231815;
-  --text-strong: #101828;
   --muted: #6b5f5b;
   --brand: #c40000;
   --brand-dark: #980000;
   --line: rgba(196, 0, 0, 0.14);
   --shadow: 0 20px 60px rgba(35, 24, 21, 0.08);
-  --surface: rgba(255, 255, 255, 0.76);
+  --surface: rgba(255, 255, 255, 0.74);
+  --surface-strong: #ffffff;
 
   position: relative;
   min-height: 100vh;
@@ -22,8 +22,8 @@
   overflow: hidden;
 }
 
-.survival-page::before,
-.survival-page::after {
+.adart-page::before,
+.adart-page::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -32,15 +32,15 @@
   opacity: 0.15;
 }
 
-.survival-page::before {
+.adart-page::before {
   width: 260px;
   height: 260px;
-  background: rgba(196, 0, 0, 0.2);
+  background: rgba(196, 0, 0, 0.22);
   top: 60px;
   left: -80px;
 }
 
-.survival-page::after {
+.adart-page::after {
   width: 320px;
   height: 320px;
   background: rgba(152, 0, 0, 0.14);
@@ -48,47 +48,43 @@
   bottom: 40px;
 }
 
-.survival-shell {
+.adart-shell {
   position: relative;
   z-index: 1;
   width: min(1180px, 100%);
   margin: 0 auto;
 }
 
-.survival-hero {
+.adart-hero {
   text-align: center;
   margin-bottom: 2.75rem;
 }
 
-.survival-eyebrow {
+.adart-eyebrow {
   display: inline-block;
   margin-bottom: 0.9rem;
-  padding: 0.55rem 0.95rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid var(--line);
-  color: var(--brand);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: var(--brand);
 }
 
-.survival-title {
+.adart-title {
   margin: 0;
   font-size: clamp(2.4rem, 5vw, 4.8rem);
   line-height: 1.02;
   font-weight: 800;
   font-family: "Glacial Indifference", sans-serif;
-  color: var(--text-strong);
+  color: #101828;
   letter-spacing: -0.03em;
 }
 
-.survival-title span {
+.adart-title span {
   color: var(--brand);
 }
 
-.survival-description {
+.adart-description {
   width: min(820px, 100%);
   margin: 1rem auto 0;
   font-size: 1.08rem;
@@ -96,7 +92,7 @@
   color: var(--muted);
 }
 
-.survival-main-card {
+.adart-main-card {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 1.5rem;
@@ -109,14 +105,14 @@
   margin-bottom: 2rem;
 }
 
-.survival-copy {
+.adart-card-copy {
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.survival-chip {
+.adart-chip {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -130,55 +126,33 @@
   text-transform: uppercase;
 }
 
-.survival-copy h2,
-.survival-archive-header h2,
-.survival-empty-state h3,
-.survival-edition-item h4 {
+.adart-card-copy h2,
+.adart-past-header h2,
+.adart-empty-state h3,
+.adart-edition-item h4 {
   font-family: "Glacial Indifference", sans-serif;
   color: var(--text);
 }
 
-.survival-copy h2,
-.survival-archive-header h2 {
+.adart-card-copy h2,
+.adart-past-header h2 {
   margin: 1rem 0 0.7rem;
   font-size: clamp(1.8rem, 3vw, 2.7rem);
   line-height: 1.1;
   font-weight: 700;
 }
 
-.survival-copy p,
-.survival-archive-header p,
-.survival-empty-state p,
-.survival-edition-item p {
+.adart-card-copy p,
+.adart-past-header p,
+.adart-empty-state p,
+.adart-edition-item p {
   margin: 0;
   color: var(--muted);
   font-size: 1.04rem;
   line-height: 1.85;
 }
 
-.survival-download-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1.4rem;
-  padding: 0.95rem 1.2rem;
-  width: fit-content;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 16px 30px rgba(152, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-}
-
-.survival-download-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 32px rgba(152, 0, 0, 0.24);
-  opacity: 0.98;
-}
-
-.survival-pdf-wrap {
+.adart-pdf-wrap {
   overflow: hidden;
   border-radius: 24px;
   border: 1px solid var(--line);
@@ -186,15 +160,15 @@
   min-height: 650px;
 }
 
-.survival-pdf-viewer {
+.adart-pdf-viewer {
   display: block;
   width: 100%;
   height: 650px;
   border: none;
-  background: #ffffff;
+  background: white;
 }
 
-.survival-archive-card {
+.adart-past-card {
   padding: 1.6rem;
   border: 1px solid var(--line);
   border-radius: 32px;
@@ -203,11 +177,11 @@
   backdrop-filter: blur(10px);
 }
 
-.survival-archive-header {
+.adart-past-header {
   margin-bottom: 1.5rem;
 }
 
-.survival-empty-state {
+.adart-empty-state {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -217,7 +191,7 @@
   background: rgba(255, 255, 255, 0.56);
 }
 
-.survival-empty-icon {
+.adart-empty-icon {
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 999px;
@@ -230,19 +204,19 @@
   flex-shrink: 0;
 }
 
-.survival-empty-state h3 {
+.adart-empty-state h3 {
   margin: 0 0 0.35rem;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
-.survival-edition-list {
+.adart-edition-list {
   display: grid;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.survival-edition-item {
+.adart-edition-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -253,13 +227,13 @@
   background: rgba(255, 255, 255, 0.78);
 }
 
-.survival-edition-item h4 {
+.adart-edition-item h4 {
   margin: 0 0 0.35rem;
   font-size: 1.15rem;
   font-weight: 700;
 }
 
-.survival-secondary-button {
+.adart-secondary-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -274,62 +248,61 @@
   white-space: nowrap;
 }
 
-.survival-secondary-button:hover {
+.adart-secondary-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 26px rgba(35, 24, 21, 0.08);
 }
 
 @media (max-width: 1024px) {
-  .survival-main-card {
+  .adart-main-card {
     grid-template-columns: 1fr;
   }
 
-  .survival-pdf-wrap,
-  .survival-pdf-viewer {
+  .adart-pdf-wrap,
+  .adart-pdf-viewer {
     min-height: 560px;
     height: 560px;
   }
 }
 
 @media (max-width: 720px) {
-  .survival-page {
+  .adart-page {
     padding: 5rem 1rem 4rem;
   }
 
-  .survival-main-card,
-  .survival-archive-card {
+  .adart-main-card,
+  .adart-past-card {
     border-radius: 24px;
     padding: 1.1rem;
   }
 
-  .survival-copy {
+  .adart-card-copy {
     padding: 0.6rem;
   }
 
-  .survival-description,
-  .survival-copy p,
-  .survival-archive-header p,
-  .survival-empty-state p,
-  .survival-edition-item p {
+  .adart-description,
+  .adart-card-copy p,
+  .adart-past-header p,
+  .adart-empty-state p,
+  .adart-edition-item p {
     font-size: 1rem;
     line-height: 1.75;
   }
 
-  .survival-pdf-wrap,
-  .survival-pdf-viewer {
+  .adart-pdf-wrap,
+  .adart-pdf-viewer {
     min-height: 440px;
     height: 440px;
     border-radius: 18px;
   }
 
-  .survival-edition-item,
-  .survival-empty-state {
+  .adart-edition-item,
+  .adart-empty-state {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .survival-secondary-button,
-  .survival-download-button {
+  .adart-secondary-button {
     width: 100%;
   }
 }

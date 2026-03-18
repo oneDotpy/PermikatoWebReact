@@ -4,7 +4,8 @@ import Papa from 'papaparse';
 import ReactMarkdown from 'react-markdown';
 import './SingleNews.css';
 
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTl5Lf7ZrC8xKCeXSfHuA-4KSYWu2Iz3KXQFP2KtAytBIObOkS4HmS7t_d7tYFT61LHzdDTHx44OslS/pub?output=csv';
+const SHEET_URL =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vTl5Lf7ZrC8xKCeXSfHuA-4KSYWu2Iz3KXQFP2KtAytBIObOkS4HmS7t_d7tYFT61LHzdDTHx44OslS/pub?output=csv';
 
 const SingleNews = () => {
   const { slug } = useParams();
@@ -17,8 +18,8 @@ const SingleNews = () => {
       download: true,
       header: true,
       complete: (result) => {
-        const found = result.data.find((item) => item.slug === slug);
-        setPost(found);
+        const found = (result.data || []).find((item) => item.slug === slug);
+        setPost(found || null);
         setLoading(false);
       },
     });
@@ -26,32 +27,65 @@ const SingleNews = () => {
 
   if (loading) {
     return (
-      <div className="loading-wrapper">
-        <div className="spinner"></div>
+      <div className="single-loading-wrapper">
+        <div className="single-spinner"></div>
       </div>
     );
   }
 
   if (!post) {
-    return <div>Post not found.</div>;
+    return (
+      <section className="single-news-wrapper">
+        <div className="single-news-shell">
+          <div className="single-empty-state">
+            <h2>Post not found</h2>
+            <p>The article you are looking for does not seem to exist.</p>
+            <button className="single-back-button" onClick={() => navigate('/news')}>
+              Back to News
+            </button>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
-    <div className="single-news-wrapper">
-      <button className="back-button" onClick={() => navigate(-1)}>&lt; Back</button>
+    <section className="single-news-wrapper">
+      <div className="single-news-shell">
+        <button className="single-back-button" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
 
-      <h1 className="single-title">{post.title}</h1>
-      <p className="single-category">{post.category} — {post.date}</p>
-      <img 
-        className="single-image" 
-        src={post.image} 
-        alt={post.title} 
-        loading='lazy'
-      />
-      <div className="single-content">
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        <article className="single-article-card">
+          <div className="single-hero">
+            <p className="single-meta">
+              <span className="single-category">{post.category || 'Article'}</span>
+              <span className="single-divider">•</span>
+              <span>{post.date}</span>
+            </p>
+
+            <h1 className="single-title">{post.title}</h1>
+
+            {post.preview && <p className="single-preview">{post.preview}</p>}
+          </div>
+
+          {post.image && (
+            <div className="single-image-wrap">
+              <img
+                className="single-image"
+                src={post.image}
+                alt={post.title}
+                loading="lazy"
+              />
+            </div>
+          )}
+
+          <div className="single-content">
+            <ReactMarkdown>{post.content || ''}</ReactMarkdown>
+          </div>
+        </article>
       </div>
-    </div>
+    </section>
   );
 };
 

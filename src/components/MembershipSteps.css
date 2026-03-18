@@ -1,155 +1,346 @@
 .membership-steps-section {
-  background-color: #A60101;
-  color: white;
-  padding: 4em 1em;
-  text-align: center;
+  --text: #231815;
+  --muted: #6b5f5b;
+  --brand: #c40000;
+  --brand-dark: #980000;
+  --line: rgba(196, 0, 0, 0.14);
+  --shadow: 0 20px 60px rgba(35, 24, 21, 0.08);
+  --surface: rgba(255, 255, 255, 0.76);
+  --surface-strong: #ffffff;
+  --bg-1: #f3e7e3;
+  --bg-2: #f7f3ef;
+  --bg-3: #f3efe9;
+
+  position: relative;
   min-height: 100vh;
+  padding: 120px 24px 80px;
+  color: var(--text);
+  background: linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+  overflow: hidden;
+}
+
+.membership-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.membership-background-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.glow-one {
+  width: 280px;
+  height: 280px;
+  background: rgba(196, 0, 0, 0.18);
+  top: 70px;
+  left: -80px;
+}
+
+.glow-two {
+  width: 320px;
+  height: 320px;
+  background: rgba(152, 0, 0, 0.12);
+  bottom: 20px;
+  right: -100px;
+}
+
+.membership-hero {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.membership-badge {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 18px;
+  font-weight: 700;
 }
 
 .membership-title {
-  font-size: 2em;
-  margin-bottom: 2em;
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #101828;
+  font-family: 'Glacial Indifference', sans-serif;
 }
 
-.steps-column {
+.membership-title span {
+  color: var(--brand);
+}
+
+.membership-subtitle {
+  max-width: 720px;
+  margin: 18px auto 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.membership-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.timeline-line-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.step-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5em;
-}
-
-.step-number {
-  background-color: #D9D9D9;
-  color: black;
-  font-weight: bold;
-  font-size: 1.5em;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+.timeline-number {
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
-  text-align: center;
-  margin-right: 1em;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 12px 28px rgba(152, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-.step-content {
-  background-color: #4D0D0D;
-  padding: 1em 2em;
-  border-radius: 12px;
-  text-align: center  ;
-  min-width: 250px;
-  transition: background 0.3s ease;
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  margin-top: 12px;
+  background: linear-gradient(
+    to bottom,
+    rgba(196, 0, 0, 0.45),
+    rgba(196, 0, 0, 0.08)
+  );
 }
 
-.step-content.clickable {
+.timeline-card {
+  position: relative;
+  padding: 28px;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 54px rgba(35, 24, 21, 0.12);
+  border-color: rgba(196, 0, 0, 0.2);
+}
+
+.timeline-card-final {
+  background: linear-gradient(135deg, rgba(196, 0, 0, 0.06), rgba(255, 255, 255, 0.82));
+}
+
+.timeline-card-top {
+  margin-bottom: 14px;
+}
+
+.timeline-status {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--brand);
+  background: rgba(196, 0, 0, 0.08);
+  padding: 8px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.timeline-title {
+  margin: 0 0 10px;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  color: var(--text);
+  font-family: "Glacial Indifference", sans-serif;
+}
+
+.timeline-description {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.timeline-btn,
+.guide-btn {
+  margin-top: 22px;
+  border: none;
+  outline: none;
   cursor: pointer;
+  border-radius: 14px;
+  padding: 14px 22px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-family: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
 
-.step-content.clickable:hover {
-  background-color: #5e1515;
+.timeline-btn {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color: #ffffff;
+  box-shadow: 0 16px 30px rgba(152, 0, 0, 0.22);
 }
 
-.step-content.transparent {
-  background-color: transparent;
-  padding: 1em 2em;
+.timeline-btn:hover,
+.guide-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
 }
 
-.step-title {
-  font-size: 1.2em;
-  font-weight: bold;
+.timeline-final-badge {
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 18px;
+  border-radius: 14px;
+  background: rgba(196, 0, 0, 0.08);
+  color: var(--brand-dark);
+  font-weight: 700;
+  border: 1px solid var(--line);
 }
 
-.step-description {
-  font-size: 0.95em;
-  margin-top: 0.5em;
-  color: #ccc;
+.membership-extra-card {
+  margin-top: 52px;
+  padding: 28px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
 }
 
-.dotted-line {
-  height: 30px;
-  border-left: 3px dotted white;
-  margin-top: -10px;
-  margin-bottom: 20px;
-  margin-left: 70px;
+.extra-label {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand);
+  font-weight: 700;
 }
 
-.survival-guide {
-  margin-top: 4em;
-  text-align: center;
+.extra-title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
+.extra-text {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .guide-btn {
-  background-color: #4D0D0D;
-  border: none;
-  color: white;
-  padding: 1em 2em;
-  font-size: 1em;
-  border-radius: 8px;
-  margin-top: 1em;
-  cursor: pointer;
-  transition: background 0.3s;
+  background: #ffffff;
+  color: var(--brand-dark);
+  white-space: nowrap;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 26px rgba(35, 24, 21, 0.08);
 }
 
-.guide-btn:hover {
-  background-color: #2a0101;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .membership-steps-section {
-    margin-top: 1em;
-    padding: 2em 1em;
+    padding: 96px 18px 60px;
   }
 
-  .membership-title {
-    font-size: 1.5em;
+  .membership-hero {
+    margin-bottom: 42px;
   }
 
-  .step-number {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2em;
-    line-height: 50px;
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  .step-content {
-    font-size: 0.95em;
-    padding: 0.8em 1.2em;
+  .timeline-line-wrap {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  .step-title {
-    font-size: 1em;
+  .timeline-line {
+    height: 2px;
+    width: 44px;
+    margin-top: 0;
+    margin-left: 12px;
+    background: linear-gradient(
+      to right,
+      rgba(196, 0, 0, 0.45),
+      rgba(196, 0, 0, 0.08)
+    );
   }
 
-  .step-description {
-    font-size: 0.85em;
+  .timeline-card {
+    padding: 22px;
+  }
+
+  .membership-extra-card {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .guide-btn {
-    font-size: 0.9em;
-    padding: 0.8em 1.5em;
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership-title {
+    font-size: 2.2rem;
   }
 
-  .step-content.transparent {
-    background-color: transparent;
-    padding: 0;
-    text-align: center;
-    min-width: 285px;
-    width: 90%;
-    display: flex;
-    justify-content: center;
+  .membership-subtitle,
+  .timeline-description,
+  .extra-text {
+    font-size: 0.95rem;
+  }
+
+  .timeline-title {
+    font-size: 1.2rem;
+  }
+
+  .timeline-number {
+    width: 54px;
+    height: 54px;
+  }
+
+  .timeline-btn,
+  .guide-btn {
+    width: 100%;
   }
 }
