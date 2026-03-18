@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Contact.css';
 import instagramLogo from "../assets/png/icons/instagram.png";
 import threadsLogo from "../assets/png/icons/threads.png";
@@ -10,7 +10,6 @@ import membershipIcon from "../assets/png/navbarlogo_white.png";
 import reportIcon from "../assets/png/icons/kjri.png";
 
 function Contact() {
-  const [faqOpen, setFaqOpen] = useState(null);
 
   const faqs = [
     { question: "What is PERMIKATO?", answer: "PERMIKATO is the Indonesian student association in Toronto, Canada, aimed at fostering community and cultural engagement." },
