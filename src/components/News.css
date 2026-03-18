@@ -21,7 +21,7 @@
 .news-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, 1fr); /* always 2 per row */
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
   max-width: 1000px;
   justify-content: center;
@@ -53,7 +53,7 @@
 
 .news-card .category {
   font-weight: bold;
-  color: #8b0000;
+  color: #c40000;
   margin: 10px 20px 0 20px;
   font-size: 0.9em;
 }
@@ -79,16 +79,18 @@
   margin-top: 3em;
   padding: 12px 24px;
   font-size: 1.1em;
-  background-color: #8b0000;
+  background: linear-gradient(135deg, #c40000 0%, #980000 100%);
   color: white;
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 12px 24px rgba(152, 0, 0, 0.18);
 }
 
 .load-more:hover {
-  background-color: #600000;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(152, 0, 0, 0.24);
 }
 
 /* Responsive */
@@ -98,7 +100,7 @@
   }
 
   .news-grid {
-    grid-template-columns: 1fr; /* one per row */
+    grid-template-columns: 1fr;
   }
   
   .news-card img {

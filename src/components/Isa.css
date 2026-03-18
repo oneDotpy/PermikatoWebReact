@@ -6,9 +6,9 @@
 .isa-section {
   --text: #231815;
   --muted: #6b5f5b;
-  --brand: #9f3b2e;
-  --brand-dark: #7b1113;
-  --line: rgba(159, 59, 46, 0.12);
+  --brand: #c40000;
+  --brand-dark: #980000;
+  --line: rgba(196, 0, 0, 0.14);
   --shadow: 0 20px 60px rgba(35, 24, 21, 0.08);
 
   position: relative;
@@ -74,7 +74,7 @@
 
 .isa-nav-button {
   appearance: none;
-  border: 1px solid rgba(159, 59, 46, 0.14);
+  border: 1px solid rgba(196, 0, 0, 0.14);
   width: 3rem;
   height: 3rem;
   border-radius: 18px;
@@ -91,7 +91,7 @@
 .isa-nav-button:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.82);
-  border-color: rgba(159, 59, 46, 0.22);
+  border-color: rgba(196, 0, 0, 0.22);
   box-shadow: 0 14px 30px rgba(35, 24, 21, 0.08);
 }
 
@@ -116,7 +116,7 @@
   grid-template-columns: 1.05fr 0.95fr;
   align-items: stretch;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(159, 59, 46, 0.1);
+  border: 1px solid rgba(196, 0, 0, 0.1);
   border-radius: 34px;
   overflow: hidden;
   box-shadow: 0 18px 40px rgba(35, 24, 21, 0.06);
@@ -139,7 +139,7 @@
   inset: 0;
   background:
     linear-gradient(180deg, rgba(16, 12, 11, 0.12) 0%, rgba(16, 12, 11, 0.46) 100%),
-    linear-gradient(135deg, rgba(123, 17, 19, 0.18), transparent 55%);
+    linear-gradient(135deg, rgba(152, 0, 0, 0.18), transparent 55%);
   z-index: 0;
 }
 

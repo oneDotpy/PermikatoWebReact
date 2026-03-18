@@ -4,9 +4,9 @@ html { scroll-behavior: smooth; }
   --bg: #fcf6f1;
   --ink: #111827;
   --muted: #6b7280;
-  --accent: #A60101;       /* Updated button color */
+  --accent: #c40000;
   --card-radius: 14px;
-  --permikato-red: #A60101; /* For subtitle text */
+  --permikato-red: #c40000;
 
   background: var(--bg);
   color: var(--ink);
@@ -64,7 +64,7 @@ html { scroll-behavior: smooth; }
 .year-selector select {
   appearance: none;
   background: #f5f5f5;
-  border: 1px solid rgba(166, 1, 1, 0.4);
+  border: 1px solid rgba(196, 0, 0, 0.4);
   color: #0f172a;
   padding: 10px 14px;
   border-radius: 999px;
@@ -74,7 +74,7 @@ html { scroll-behavior: smooth; }
   transition: box-shadow 0.2s ease, transform 0.06s ease;
 }
 .year-selector select:focus {
-  box-shadow: 0 0 0 4px rgba(166, 1, 1, 0.15);
+  box-shadow: 0 0 0 4px rgba(196, 0, 0, 0.15);
 }
 
 /* === Division Buttons === */
