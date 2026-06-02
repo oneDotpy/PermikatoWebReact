@@ -179,19 +179,134 @@
 }
 
 .survival-pdf-wrap {
+  position: relative;
   overflow: hidden;
+  display: block;
+  padding: 0;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--brand-dark);
   min-height: 650px;
 }
 
-.survival-pdf-viewer {
+.survival-booklet {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2.5vw, 2rem) 5.6rem;
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.08), transparent 36%),
+    linear-gradient(180deg, #961212 0%, #700b0b 56%, #4f0707 100%);
+  box-shadow: inset 0 -90px 90px rgba(49, 4, 4, 0.62);
+}
+
+.survival-booklet-stage {
+  min-height: 0;
+  display: grid;
+  place-items: center;
+}
+
+.survival-pdf-preview {
   display: block;
-  width: 100%;
-  height: 650px;
-  border: none;
-  background: #ffffff;
+  width: min(100%, 430px);
+  height: auto;
+  border-radius: var(--radius-sm);
+  background: #f7f1e7;
+  box-shadow: 0 24px 42px rgba(3, 8, 14, 0.36);
+  transition: opacity 0.18s ease;
+}
+
+.survival-booklet-controls {
+  position: absolute;
+  left: clamp(1rem, 2.5vw, 2rem);
+  right: clamp(1rem, 2.5vw, 2rem);
+  bottom: 1.35rem;
+  color: #fff;
+}
+
+.survival-booklet-progress {
+  height: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.survival-booklet-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #fff;
+  transition: width 0.2s ease;
+}
+
+.survival-control-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+}
+
+.survival-control-row button {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.18s ease, opacity 0.18s ease;
+}
+
+.survival-control-row button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.survival-control-row button:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.survival-page-count {
+  min-width: 5.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.14rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.survival-fullscreen-button {
+  margin-left: auto;
+  font-size: 1.45rem !important;
+}
+
+.survival-viewer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: rgba(49, 4, 4, 0.86);
+  backdrop-filter: blur(8px);
+}
+
+.survival-booklet.is-fullscreen {
+  width: min(980px, 100%);
+  height: min(92vh, 980px);
+  min-height: 0;
+}
+
+.survival-booklet.is-fullscreen .survival-pdf-preview {
+  width: min(100%, 520px);
+  max-height: calc(92vh - 9rem);
+  object-fit: contain;
 }
 
 .survival-archive-card {
@@ -284,10 +399,12 @@
     grid-template-columns: 1fr;
   }
 
-  .survival-pdf-wrap,
-  .survival-pdf-viewer {
+  .survival-pdf-wrap {
     min-height: 560px;
-    height: 560px;
+  }
+
+  .survival-booklet {
+    min-height: 560px;
   }
 }
 
@@ -315,11 +432,18 @@
     line-height: 1.75;
   }
 
-  .survival-pdf-wrap,
-  .survival-pdf-viewer {
+  .survival-pdf-wrap {
     min-height: 440px;
-    height: 440px;
     border-radius: 18px;
+  }
+
+  .survival-booklet {
+    min-height: 440px;
+    padding: 1rem 0.8rem 5rem;
+  }
+
+  .survival-pdf-preview {
+    width: min(100%, 340px);
   }
 
   .survival-edition-item,

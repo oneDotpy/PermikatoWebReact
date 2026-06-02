@@ -1,7 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SurvivalGuide.css";
 
 function SurvivalGuide() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const guidePdf = "/assets/guides/PERMIKATO E-BOOKLET 2025.pdf";
+  const guidePages = Array.from(
+    { length: 49 },
+    (_, index) =>
+      `/assets/guides/survival-guide-2025-pages/page-${String(index + 1).padStart(2, "0")}.png`
+  );
+
+  const goToPreviousPage = () => {
+    setCurrentPage((page) => Math.max(page - 1, 0));
+  };
+
+  const goToNextPage = () => {
+    setCurrentPage((page) => Math.min(page + 1, guidePages.length - 1));
+  };
+
+  const renderBookletViewer = (isFullscreen = false) => (
+    <div className={isFullscreen ? "survival-booklet is-fullscreen" : "survival-booklet"}>
+      <div className="survival-booklet-stage" aria-live="polite">
+        <img
+          src={guidePages[currentPage]}
+          alt={`Preview of the PERMIKATO Survival Guide 2025 page ${currentPage + 1}`}
+          className="survival-pdf-preview"
+          loading={currentPage === 0 ? "eager" : "lazy"}
+        />
+      </div>
+
+      <div className="survival-booklet-controls">
+        <div
+          className="survival-booklet-progress"
+          aria-hidden="true"
+        >
+          <span
+            style={{
+              width: `${((currentPage + 1) / guidePages.length) * 100}%`,
+            }}
+          />
+        </div>
+
+        <div className="survival-control-row">
+          <button
+            type="button"
+            onClick={goToPreviousPage}
+            disabled={currentPage === 0}
+            aria-label="Previous PDF page"
+          >
+            ‹
+          </button>
+          <span className="survival-page-count">
+            {currentPage + 1} / {guidePages.length}
+          </span>
+          <button
+            type="button"
+            onClick={goToNextPage}
+            disabled={currentPage === guidePages.length - 1}
+            aria-label="Next PDF page"
+          >
+            ›
+          </button>
+
+          <button
+            type="button"
+            className="survival-fullscreen-button"
+            onClick={() => setIsViewerOpen((open) => !open)}
+            aria-label={isFullscreen ? "Close fullscreen booklet" : "Open fullscreen booklet"}
+          >
+            {isFullscreen ? "×" : "⛶"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section className="survival-page">
       <div className="survival-shell">
@@ -27,7 +101,7 @@ function SurvivalGuide() {
             </p>
 
             <a
-              href="/assets/guides/PERMIKATO E-BOOKLET 2025.pdf"
+              href={guidePdf}
               className="survival-download-button"
               download
             >
@@ -36,13 +110,15 @@ function SurvivalGuide() {
           </div>
 
           <div className="survival-pdf-wrap">
-            <embed
-              src="/assets/guides/PERMIKATO E-BOOKLET 2025.pdf"
-              type="application/pdf"
-              className="survival-pdf-viewer"
-            />
+            {renderBookletViewer()}
           </div>
         </div>
+
+        {isViewerOpen && (
+          <div className="survival-viewer-modal" role="dialog" aria-modal="true">
+            {renderBookletViewer(true)}
+          </div>
+        )}
 
         <div className="survival-archive-card">
           <div className="survival-archive-header">
