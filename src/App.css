@@ -20,18 +20,19 @@ section {
 section {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-margin-top: 84px;
 }
 
 /* Ensure the body has a default background and color */
 body {
-  background-color: #000;
-  color: #d9d9d9;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
 }
 
 /* Add additional styling for the main content if needed */
 .main-content {
   padding: 20px;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: var(--font-primary);
 }
 
 /* Optional: Style the container to include a transition effect */

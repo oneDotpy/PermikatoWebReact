@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import aboutImage from "../assets/png/_MG_1340.JPG";
 
 function About() {
   return (
@@ -8,7 +9,7 @@ function About() {
         <div className="about-header">
           <div className="about-heading-block">
             <span className="about-eyebrow">About Permika Toronto</span>
-            <h2>We are the Indonesian students of Toronto</h2>
+            <h2>We Are the Indonesian Students of Toronto</h2>
           </div>
 
           <p className="about-intro">
@@ -19,10 +20,15 @@ function About() {
         </div>
 
         <div className="about-content-grid">
+          <figure className="about-image-panel">
+            <img src={aboutImage} alt="PERMIKATO students at a community event" />
+            <figcaption>A community moment at KJRI Toronto.</figcaption>
+          </figure>
+
           <div className="about-highlight-card">
             <div className="about-highlight-top">
-              <span className="about-mini-label">Community at a glance</span>
-              <h3>160+ students across 9 colleges and universities</h3>
+              <span className="about-mini-label">Community at a Glance</span>
+              <h3>160+ Students Across 9 Colleges and Universities</h3>
             </div>
 
             <p>
@@ -35,7 +41,7 @@ function About() {
           </div>
 
           <div className="about-text-card">
-            <span className="about-mini-label">What we stand for</span>
+            <span className="about-mini-label">What We Stand For</span>
             <p>
               We aim to foster fruitful relationships between Indonesian
               students and the diaspora in Toronto, provide networking

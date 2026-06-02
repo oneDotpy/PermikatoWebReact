@@ -109,7 +109,7 @@ function Contact() {
                 <img src={membershipIcon} alt="PERMIKATO Linktree" />
               </div>
               <div className="contact-link-text">
-                <h3>All ongoing PERMIKATO events and forms</h3>
+                <h3>All Ongoing PERMIKATO Events and Forms</h3>
                 <p>Access current registrations, updates, and active links in one place.</p>
               </div>
               <span className="contact-link-arrow">↗</span>

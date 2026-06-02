@@ -139,7 +139,7 @@ function ContactFoot() {
 
           <div className="contact-foot-bottomrow">
             <p>© 2025 PERMIKATO. All rights reserved.</p>
-            <p>Made for the Indonesian student community in Toronto.</p>
+            <p>Made for the Indonesian Student Community in Toronto.</p>
           </div>
         </div>
       </div>

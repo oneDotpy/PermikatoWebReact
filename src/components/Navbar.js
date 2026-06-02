@@ -15,11 +15,12 @@ function Navbar() {
 
   const homeSectionThemes = useMemo(
     () => ({
-      home: "light",
-      about: "red",
-      team: "dark",
-      events: "red",
-      dump: "red",
+      home: "dark",
+      about: "light",
+      isa: "light",
+      team: "light",
+      events: "light",
+      dump: "light",
       contact: "dark",
     }),
     []

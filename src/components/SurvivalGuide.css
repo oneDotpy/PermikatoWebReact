@@ -7,24 +7,24 @@
   --text: #231815;
   --text-strong: #101828;
   --muted: #6b5f5b;
-  --brand: #c40000;
-  --brand-dark: #980000;
-  --line: rgba(196, 0, 0, 0.14);
-  --shadow: 0 20px 60px rgba(35, 24, 21, 0.08);
-  --surface: rgba(255, 255, 255, 0.76);
+  --brand: var(--color-brand);
+  --brand-dark: var(--color-brand-dark);
+  --line: rgba(154, 22, 22, 0.14);
+  --shadow: none;
+  --surface: rgba(255, 255, 255, 0.72);
 
   position: relative;
   min-height: 100vh;
   padding: 7rem 1.5rem 5rem;
-  background: linear-gradient(90deg, #f3e7e3 0%, #f7f3ef 50%, #f3efe9 100%);
+  background: var(--color-paper-soft);
   color: var(--text);
-  font-family: "Glacial Indifference", sans-serif;
+  font-family: var(--font-primary);
   overflow: hidden;
 }
 
 .survival-page::before,
 .survival-page::after {
-  content: "";
+  content: none;
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
@@ -35,7 +35,7 @@
 .survival-page::before {
   width: 260px;
   height: 260px;
-  background: rgba(196, 0, 0, 0.2);
+  background: rgba(154, 22, 22, 0.2);
   top: 60px;
   left: -80px;
 }
@@ -43,7 +43,7 @@
 .survival-page::after {
   width: 320px;
   height: 320px;
-  background: rgba(152, 0, 0, 0.14);
+  background: rgba(112, 11, 11, 0.14);
   right: -100px;
   bottom: 40px;
 }
@@ -69,7 +69,7 @@
   border: 1px solid var(--line);
   color: var(--brand);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -78,10 +78,10 @@
   margin: 0;
   font-size: clamp(2.4rem, 5vw, 4.8rem);
   line-height: 1.02;
-  font-weight: 800;
-  font-family: "Glacial Indifference", sans-serif;
+  font-weight: 600;
+  font-family: var(--font-primary);
   color: var(--text-strong);
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .survival-title span {
@@ -91,8 +91,8 @@
 .survival-description {
   width: min(820px, 100%);
   margin: 1rem auto 0;
-  font-size: 1.08rem;
-  line-height: 1.9;
+  font-size: clamp(1.12rem, 1.35vw, 1.24rem);
+  line-height: 1.74;
   color: var(--muted);
 }
 
@@ -102,7 +102,7 @@
   gap: 1.5rem;
   padding: 1.5rem;
   border: 1px solid var(--line);
-  border-radius: 32px;
+  border-radius: var(--radius-md);
   background: var(--surface);
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
@@ -122,10 +122,10 @@
   width: fit-content;
   padding: 0.5rem 0.85rem;
   border-radius: 999px;
-  background: rgba(196, 0, 0, 0.08);
+  background: rgba(154, 22, 22, 0.08);
   color: var(--brand);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -134,7 +134,7 @@
 .survival-archive-header h2,
 .survival-empty-state h3,
 .survival-edition-item h4 {
-  font-family: "Glacial Indifference", sans-serif;
+  font-family: var(--font-primary);
   color: var(--text);
 }
 
@@ -143,7 +143,7 @@
   margin: 1rem 0 0.7rem;
   font-size: clamp(1.8rem, 3vw, 2.7rem);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .survival-copy p,
@@ -152,8 +152,8 @@
 .survival-edition-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 1.04rem;
-  line-height: 1.85;
+  font-size: 1.1rem;
+  line-height: 1.72;
 }
 
 .survival-download-button {
@@ -167,20 +167,20 @@
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
   color: #ffffff;
   text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 16px 30px rgba(152, 0, 0, 0.2);
+  font-weight: 500;
+  box-shadow: 0 16px 30px rgba(112, 11, 11, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
 .survival-download-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 32px rgba(152, 0, 0, 0.24);
+  box-shadow: 0 18px 32px rgba(112, 11, 11, 0.24);
   opacity: 0.98;
 }
 
 .survival-pdf-wrap {
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.82);
   min-height: 650px;
@@ -197,7 +197,7 @@
 .survival-archive-card {
   padding: 1.6rem;
   border: 1px solid var(--line);
-  border-radius: 32px;
+  border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.72);
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
@@ -212,8 +212,8 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1.2rem 1.25rem;
-  border-radius: 22px;
-  border: 1px dashed rgba(196, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(154, 22, 22, 0.2);
   background: rgba(255, 255, 255, 0.56);
 }
 
@@ -223,7 +223,7 @@
   border-radius: 999px;
   display: grid;
   place-items: center;
-  background: rgba(196, 0, 0, 0.08);
+  background: rgba(154, 22, 22, 0.08);
   color: var(--brand);
   font-size: 1.5rem;
   line-height: 1;
@@ -233,7 +233,7 @@
 .survival-empty-state h3 {
   margin: 0 0 0.35rem;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .survival-edition-list {
@@ -248,7 +248,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.2rem 1.25rem;
-  border-radius: 22px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.78);
 }
@@ -256,7 +256,7 @@
 .survival-edition-item h4 {
   margin: 0 0 0.35rem;
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .survival-secondary-button {
@@ -269,7 +269,7 @@
   background: rgba(255, 255, 255, 0.88);
   color: var(--text);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }

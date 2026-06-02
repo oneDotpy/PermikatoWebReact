@@ -31,21 +31,21 @@ function Dump() {
       <div className="dump-shell">
         <div className="dump-header">
           <div>
-            <span className="dump-eyebrow">Moments we keep</span>
-            <h2>Photo dump from our community, events, and memories</h2>
+            <span className="dump-eyebrow">Moments We Keep</span>
+            <h2>Photo Dump from Our Community, Events, and Memories</h2>
           </div>
 
           <p>
             A glimpse into the people, energy, and little moments that make
-            PERMIKATO feel like home. Scroll through our gallery and revisit
-            the memories we have built together.
+            PERMIKATO feel like home through the memories we have built
+            together.
           </p>
         </div>
 
         <div className="dump-featured-card">
           <div className="dump-featured-copy">
-            <span className="dump-chip">Community gallery</span>
-            <h3>Captured moments that feel warm, lively, and personal</h3>
+            <span className="dump-chip">Community Gallery</span>
+            <h3>Captured Moments That Feel Warm, Lively, and Personal</h3>
             <p>
               From welcoming new students to casual hangouts and shared
               celebrations, this gallery highlights the spirit of our community
@@ -54,16 +54,16 @@ function Dump() {
 
             <div className="dump-actions">
               <a
-                href="https://drive.google.com/drive/folders/YOUR_GOOGLE_DRIVE_LINK"
+                href="https://www.instagram.com/permikato/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="dump-primary-button"
               >
-                Open full drive
+                Open Instagram
               </a>
 
               <a href="#events" className="dump-secondary-button">
-                Back to events
+                Back to Events
               </a>
             </div>
           </div>
@@ -93,10 +93,6 @@ function Dump() {
               </article>
             ))}
           </div>
-        </div>
-
-        <div className="dump-footer-note">
-          Swipe on mobile or scroll horizontally to explore more moments.
         </div>
       </div>
     </section>

@@ -121,8 +121,8 @@ function Events() {
       <div className="events-shell">
         <div className="events-header">
           <div>
-            <span className="events-eyebrow">What we do</span>
-            <h2>Events that bring Indonesian students together in Toronto</h2>
+            <span className="events-eyebrow">What We Do</span>
+            <h2>Events That Bring Indonesian Students Together in Toronto</h2>
           </div>
 
           <p>
@@ -145,7 +145,7 @@ function Events() {
                   className="events-primary-button"
                   onClick={() => handleEventClick(featuredEvent)}
                 >
-                  {featuredEvent.slug ? "Read full story" : "Open gallery"}
+                  {featuredEvent.slug ? "Read Full Story" : "Open Gallery"}
                 </button>
 
                 {featuredEvent.galleryLink && (
@@ -155,7 +155,7 @@ function Events() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Open gallery
+                    Open Gallery
                   </a>
                 )}
               </div>
@@ -195,7 +195,7 @@ function Events() {
 
                 <div className="event-card-footer">
                   <span className="event-card-link">
-                    {event.slug ? "Read full story" : "View gallery"}
+                    {event.slug ? "Read Full Story" : "View Gallery"}
                   </span>
 
                   {event.galleryLink ? (
@@ -210,7 +210,7 @@ function Events() {
                     </a>
                   ) : (
                     <span className="event-card-gallery muted">
-                      No gallery yet
+                      No Gallery Yet
                     </span>
                   )}
                 </div>

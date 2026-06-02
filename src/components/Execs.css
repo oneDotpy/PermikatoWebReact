@@ -4,9 +4,9 @@ html { scroll-behavior: smooth; }
   --bg: #fcf6f1;
   --ink: #111827;
   --muted: #6b7280;
-  --accent: #c40000;
+  --accent: var(--color-brand);
   --card-radius: 14px;
-  --permikato-red: #c40000;
+  --permikato-red: var(--color-brand);
 
   background: var(--bg);
   color: var(--ink);
@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 /* === Top Title === */
 .execs-title {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 600;
   text-align: center;
   margin-top: 12vh;
   margin-bottom: 10px;
@@ -40,7 +40,7 @@ html { scroll-behavior: smooth; }
 /* === Subtitle === */
 .execs-subtitle {
   font-size: 2rem;               /* Bigger subtitle */
-  font-weight: 800;
+  font-weight: 600;
   color: var(--permikato-red);
   margin-top: 10px;
   margin-bottom: 32px;
@@ -58,23 +58,23 @@ html { scroll-behavior: smooth; }
   margin-bottom: 22px;
 }
 .year-selector label {
-  font-weight: 600;
+  font-weight: 500;
   color: #111827;
 }
 .year-selector select {
   appearance: none;
   background: #f5f5f5;
-  border: 1px solid rgba(196, 0, 0, 0.4);
+  border: 1px solid rgba(154, 22, 22, 0.4);
   color: #0f172a;
   padding: 10px 14px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   outline: none;
   transition: box-shadow 0.2s ease, transform 0.06s ease;
 }
 .year-selector select:focus {
-  box-shadow: 0 0 0 4px rgba(196, 0, 0, 0.15);
+  box-shadow: 0 0 0 4px rgba(154, 22, 22, 0.15);
 }
 
 /* === Division Buttons === */
@@ -93,7 +93,7 @@ html { scroll-behavior: smooth; }
   border: 1px solid var(--accent);
   border-radius: 999px;
   padding: 9px 16px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.07rem;
   font-family: inherit;
   cursor: pointer;
@@ -119,7 +119,7 @@ html { scroll-behavior: smooth; }
 }
 .division-title {
   font-size: 2.3rem;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0 0 28px 0;
   position: relative;
 }
@@ -174,7 +174,7 @@ html { scroll-behavior: smooth; }
 .exec-info h3 {
   margin: 6px 0 2px;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #111827;
 }
 .exec-info p {

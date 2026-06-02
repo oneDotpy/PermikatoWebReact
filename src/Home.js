@@ -30,6 +30,26 @@ function Home() {
     }
   }, [location, navigate]);
 
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const sectionId = location.hash.replace("#", "");
+    const scrollToSection = () => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    const firstPass = window.setTimeout(scrollToSection, 150);
+    const settledPass = window.setTimeout(scrollToSection, 1200);
+
+    return () => {
+      window.clearTimeout(firstPass);
+      window.clearTimeout(settledPass);
+    };
+  }, [location.hash]);
+
   return (
     <div className="Home">
       <Banner />

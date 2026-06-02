@@ -43,9 +43,9 @@ function EventDetailPage() {
       <section className="event-detail-page">
         <div className="event-detail-shell">
           <button onClick={handleBackToEvents} className="event-detail-back button-reset">
-            ← Back to events
+            ← Back to Events
           </button>
-          <h1>Event not found</h1>
+          <h1>Event Not Found</h1>
           <p>This event page is not available yet.</p>
         </div>
       </section>
@@ -66,7 +66,7 @@ function EventDetailPage() {
             onClick={handleBackToEvents}
             className="event-detail-back light button-reset"
           >
-            ← Back to events
+            ← Back to Events
           </button>
           <span className="event-detail-chip">{content.tag}</span>
           <h1>{event.title}</h1>
@@ -84,7 +84,7 @@ function EventDetailPage() {
 
           <aside className="event-detail-sidebar">
             <div className="event-detail-card">
-              <h3>About this event</h3>
+              <h3>About This Event</h3>
               <p>{content.shortDescription}</p>
             </div>
 

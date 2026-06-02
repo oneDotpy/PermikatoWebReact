@@ -53,7 +53,7 @@ function AdART() {
           <div className="adart-empty-state">
             <div className="adart-empty-icon">•</div>
             <div>
-              <h3>More editions coming soon</h3>
+              <h3>More Editions Coming Soon</h3>
               <p>
                 Archived AD/ART documents for previous terms will appear here
                 once they are uploaded.

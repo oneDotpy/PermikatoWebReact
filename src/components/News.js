@@ -63,7 +63,7 @@ const NewsPage = () => {
                 <p className="news-preview">{item.preview}</p>
                 <div className="news-card-footer">
                   <p className="date">{item.date}</p>
-                  <span className="news-readmore">Read article</span>
+                  <span className="news-readmore">Read Article</span>
                 </div>
               </div>
             </article>

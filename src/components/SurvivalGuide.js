@@ -57,7 +57,7 @@ function SurvivalGuide() {
           <div className="survival-empty-state">
             <div className="survival-empty-icon">•</div>
             <div>
-              <h3>More editions coming soon</h3>
+              <h3>More Editions Coming Soon</h3>
               <p>
                 Older survival guide editions will appear here once they are
                 uploaded.

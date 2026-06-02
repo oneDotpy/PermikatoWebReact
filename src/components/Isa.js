@@ -28,14 +28,14 @@ function Isa() {
     () => [
       {
         image: gta,
-        heading: 'Indonesian student communities across the Greater Toronto Area',
-        title: 'A shared network of Indonesian student communities in Toronto and beyond',
+        heading: 'Indonesian Student Communities Across the Greater Toronto Area',
+        title: 'A Shared Network of Indonesian Student Communities in Toronto and Beyond',
         description:
           'PERMIKATO is connected with Indonesian Student Associations across the Greater Toronto Area. Each campus community helps students settle in, build friendships, celebrate culture, and feel at home while studying abroad.',
         meta: [
-          'Student-led communities',
-          'Cultural and social activities',
-          'A home away from home',
+          'Student-Led Communities',
+          'Cultural and Social Activities',
+          'A Home Away from Home',
         ],
         isIntro: true,
       },
@@ -148,7 +148,7 @@ function Isa() {
         <div className="isa-header">
           <div>
             <span className="isa-eyebrow">Indonesian Student Associations</span>
-            <h2>Meet Indonesian Student Associations across Toronto and beyond</h2>
+            <h2>Meet Indonesian Student Associations Across Toronto and Beyond</h2>
           </div>
 
           <p>
