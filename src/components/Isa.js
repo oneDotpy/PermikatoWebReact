@@ -28,8 +28,8 @@ function Isa() {
     () => [
       {
         image: gta,
-        heading: 'Indonesian Student Communities Across the Greater Toronto Area',
-        title: 'A Shared Network of Indonesian Student Communities in Toronto and Beyond',
+        heading: 'Indonesian Student Associations Across the Greater Toronto Area',
+        title: 'A Shared Network of Indonesian Student Associations in Toronto and Beyond',
         description:
           'PERMIKATO is connected with Indonesian Student Associations across the Greater Toronto Area. Each campus community helps students settle in, build friendships, celebrate culture, and feel at home while studying abroad.',
         meta: [
