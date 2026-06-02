@@ -26,15 +26,13 @@
 
 .about-header {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.62fr);
-  gap: clamp(2rem, 4.5vw, 4rem);
-  align-items: center;
+  grid-template-columns: 1fr;
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
   border-bottom: 1px solid var(--line);
 }
 
 .about-heading-block {
-  max-width: 760px;
+  max-width: none;
 }
 
 .about-eyebrow,
@@ -54,18 +52,20 @@
 
 .about-header h2 {
   margin: 0;
-  max-width: 12ch;
+  max-width: none;
   color: var(--text);
   font-family: var(--font-primary);
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(2.55rem, 4.2vw, 4.25rem);
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 1.12;
 }
 
 .about-intro {
-  margin: 0;
-  max-width: 36rem;
+  margin: clamp(1.35rem, 2.4vw, 1.9rem) 0 0;
+  max-width: 58rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(150, 18, 18, 0.32);
   color: var(--muted);
   font-size: clamp(1.14rem, 1.45vw, 1.32rem);
   font-weight: 400;
@@ -117,13 +117,13 @@
 
 .about-highlight-top h3 {
   margin: 0.85rem 0 1.35rem;
-  max-width: 14ch;
+  max-width: 18ch;
   color: var(--text);
   font-family: var(--font-primary);
   font-size: clamp(2.25rem, 4vw, 4rem);
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 0.98;
+  line-height: 1.04;
 }
 
 .about-highlight-card p,
@@ -160,13 +160,12 @@
 }
 
 @media (max-width: 1024px) {
-  .about-header,
   .about-content-grid {
     grid-template-columns: 1fr;
   }
 
   .about-header h2 {
-    max-width: 14ch;
+    max-width: none;
   }
 
   .about-image-panel img {
@@ -188,7 +187,7 @@
   }
 
   .about-header {
-    gap: 1.35rem;
+    padding-bottom: 2.25rem;
   }
 
   .about-header h2 {

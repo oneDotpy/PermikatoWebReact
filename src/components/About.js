@@ -9,7 +9,11 @@ function About() {
         <div className="about-header">
           <div className="about-heading-block">
             <span className="about-eyebrow">About Permika Toronto</span>
-            <h2>We Are the Indonesian Students of Toronto</h2>
+            <h2>
+              Indonesian Students Building
+              <br />
+              Community in Toronto
+            </h2>
           </div>
 
           <p className="about-intro">

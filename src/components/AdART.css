@@ -56,7 +56,7 @@
 }
 
 .adart-hero {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2.75rem;
 }
 
@@ -72,6 +72,7 @@
 
 .adart-title {
   margin: 0;
+  max-width: 18ch;
   font-size: clamp(2.4rem, 5vw, 4.8rem);
   line-height: 1.02;
   font-weight: 600;
@@ -86,7 +87,7 @@
 
 .adart-description {
   width: min(820px, 100%);
-  margin: 1rem auto 0;
+  margin: 1rem 0 0;
   font-size: clamp(1.12rem, 1.35vw, 1.24rem);
   line-height: 1.74;
   color: var(--muted);

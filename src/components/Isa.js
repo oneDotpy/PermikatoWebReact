@@ -148,7 +148,11 @@ function Isa() {
         <div className="isa-header">
           <div>
             <span className="isa-eyebrow">Indonesian Student Associations</span>
-            <h2>Meet Indonesian Student Associations Across Toronto and Beyond</h2>
+            <h2>
+              Indonesian Student Associations
+              <br />
+              Across Toronto and Beyond
+            </h2>
           </div>
 
           <p>

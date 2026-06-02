@@ -26,9 +26,7 @@
 
 .dump-header {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.68fr);
-  gap: clamp(2rem, 4.5vw, 4rem);
-  align-items: center;
+  grid-template-columns: 1fr;
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
@@ -50,17 +48,19 @@
 
 .dump-header h2 {
   margin: 0;
-  max-width: 15ch;
+  max-width: none;
   color: var(--text);
-  font-size: clamp(2.25rem, 4.5vw, 4.5rem);
+  font-size: clamp(2.35rem, 3.8vw, 3.9rem);
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 1.12;
 }
 
 .dump-header p {
-  margin: 0;
-  max-width: 38rem;
+  margin: clamp(1.35rem, 2.4vw, 1.9rem) 0 0;
+  max-width: 58rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(150, 18, 18, 0.32);
   color: var(--muted);
   font-size: clamp(1.12rem, 1.35vw, 1.24rem);
   font-weight: 400;
@@ -90,12 +90,12 @@
 
 .dump-featured-copy h3 {
   margin: 0;
-  max-width: 12ch;
+  max-width: 18ch;
   color: var(--text);
   font-size: clamp(1.9rem, 3.3vw, 3.3rem);
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.08;
+  line-height: 1.06;
 }
 
 .dump-featured-copy p {
