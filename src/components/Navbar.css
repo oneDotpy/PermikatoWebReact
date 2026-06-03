@@ -19,8 +19,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 76px;
-  padding: 0.85rem max(var(--section-x), env(safe-area-inset-left));
+  min-height: 84px;
+  padding: 0.95rem max(var(--section-x), env(safe-area-inset-left));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +61,7 @@
 }
 
 .navbar-brand img {
-  height: 48px;
+  height: 54px;
   width: auto;
   display: block;
 }
@@ -86,7 +86,7 @@
   align-items: center;
   text-decoration: none;
   font-family: var(--font-primary);
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   font-weight: 500;
   letter-spacing: 0;
   cursor: pointer;
@@ -143,7 +143,7 @@
 
 .dropdown-trigger > span::before {
   content: "▾";
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   margin-right: 0.35rem;
   transform: translateY(-0.01rem);
   opacity: 0.7;
@@ -184,7 +184,7 @@
   padding: 0.72rem 0.8rem;
   border-radius: var(--radius-sm);
   color: var(--nav-light-text) !important;
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   font-weight: 500;
   text-decoration: none;
 }
