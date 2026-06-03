@@ -42,7 +42,7 @@ const socials = [
   {
     name: "YouTube",
     icon: youtubeLogo,
-    url: "https://www.youtube.com/@permikatoronto2281",
+    url: "https://www.youtube.com/@permikatoronto",
   },
   {
     name: "LinkedIn",
@@ -56,23 +56,42 @@ function ContactFoot() {
     <footer className="contact-foot">
       <div className="contact-foot-main">
         <div className="contact-foot-container">
-          <div className="contact-foot-toprow">
-            <div className="contact-foot-brand">
-              <div className="contact-foot-brandline">
-                <div className="contact-foot-logo-wrap">
-                  <img
-                    src={permikatoLogo}
-                    alt="PERMIKATO logo"
-                    className="contact-foot-logo"
-                  />
-                </div>
-
-                <div className="contact-foot-brandtext">
-                  <h2>PERMIKATO</h2>
-                  <p>Indonesian Students’ Association in Toronto</p>
-                </div>
+          <div className="contact-foot-head">
+            <div className="contact-foot-brandline">
+              <div className="contact-foot-logo-wrap">
+                <img
+                  src={permikatoLogo}
+                  alt="PERMIKATO logo"
+                  className="contact-foot-logo"
+                />
               </div>
 
+              <div className="contact-foot-brandtext">
+                <h2>PERMIKATO</h2>
+                <p>Indonesian Students’ Association in Toronto</p>
+              </div>
+            </div>
+
+            <div className="contact-foot-socials">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-foot-social"
+                  aria-label={social.name}
+                  title={social.name}
+                >
+                  <img src={social.icon} alt={social.name} />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="contact-foot-content">
+            <div className="contact-foot-message">
+              <span className="contact-foot-title">Stay Connected</span>
               <p className="contact-foot-description">
                 Building community, connection, and a home away from home for
                 Indonesian students in the Greater Toronto Area.
@@ -113,29 +132,8 @@ function ContactFoot() {
                   For collaborations, questions, and community inquiries.
                 </p>
               </div>
-
-              <div className="contact-foot-column">
-                <span className="contact-foot-title">Follow Us</span>
-                <div className="contact-foot-socials">
-                  {socials.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="contact-foot-social"
-                      aria-label={social.name}
-                      title={social.name}
-                    >
-                      <img src={social.icon} alt={social.name} />
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
-
-          <div className="contact-foot-divider" />
 
           <div className="contact-foot-bottomrow">
             <p>© 2025 PERMIKATO. All rights reserved.</p>
