@@ -89,13 +89,13 @@
 }
 
 .single-hero {
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
 .single-meta {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 0.7rem;
   flex-wrap: wrap;
@@ -117,7 +117,6 @@
 
 .single-title {
   margin: 0;
-  max-width: 18ch;
   font-family: var(--font-primary);
   font-size: clamp(2.3rem, 5vw, 4.3rem);
   line-height: 1.05;

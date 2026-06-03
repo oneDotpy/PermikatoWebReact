@@ -52,7 +52,7 @@
 }
 
 .membership-hero {
-  text-align: left;
+  text-align: center;
   margin-bottom: 64px;
 }
 
@@ -73,7 +73,6 @@
 
 .membership-title {
   margin: 0;
-  max-width: 18ch;
   font-size: clamp(2.5rem, 5vw, 4.6rem);
   line-height: 1.02;
   font-weight: 600;
@@ -88,7 +87,7 @@
 
 .membership-subtitle {
   max-width: 720px;
-  margin: 18px 0 0;
+  margin: 18px auto 0;
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--muted);
