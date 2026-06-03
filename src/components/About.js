@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutImage from "../assets/png/_MG_1340.JPG";
+import aboutImage from "../assets/png/events/spookseek.JPG";
 
 function About() {
   return (
@@ -26,7 +26,7 @@ function About() {
         <div className="about-content-grid">
           <figure className="about-image-panel">
             <img src={aboutImage} alt="PERMIKATO students at a community event" />
-            <figcaption>A community moment at KJRI Toronto.</figcaption>
+            <figcaption>Spook n Seek with the PERMIKATO community.</figcaption>
           </figure>
 
           <div className="about-highlight-card">
