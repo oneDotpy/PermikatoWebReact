@@ -32,7 +32,10 @@ function About() {
           <div className="about-highlight-card">
             <div className="about-highlight-top">
               <span className="about-mini-label">Community at a Glance</span>
-              <h3>160+ Students Across 9 Colleges and Universities</h3>
+              <div className="about-stat-lockup">
+                <strong>160+</strong>
+                <h3>Students Across 9 Colleges and Universities</h3>
+              </div>
             </div>
 
             <p>

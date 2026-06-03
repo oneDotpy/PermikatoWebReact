@@ -74,9 +74,9 @@
 
 .about-content-grid {
   display: grid;
-  grid-template-columns: minmax(400px, 1.04fr) minmax(0, 0.96fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: start;
+  grid-template-columns: minmax(440px, 1.08fr) minmax(390px, 0.82fr);
+  gap: clamp(2.75rem, 5.2vw, 5.75rem);
+  align-items: center;
   padding-top: clamp(2.5rem, 5vw, 4rem);
 }
 
@@ -108,22 +108,35 @@
 }
 
 .about-highlight-card {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+  padding: clamp(1rem, 2vw, 1.75rem) 0;
 }
 
-.about-highlight-top h3 {
+.about-stat-lockup {
   margin: 0.85rem 0 1.35rem;
-  max-width: 18ch;
+}
+
+.about-stat-lockup strong {
+  display: block;
   color: var(--text);
   font-family: var(--font-primary);
-  font-size: clamp(2.25rem, 4vw, 4rem);
+  font-size: clamp(4.5rem, 7.2vw, 7.1rem);
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.04;
+  line-height: 0.92;
+}
+
+.about-stat-lockup h3 {
+  margin: 0.7rem 0 0;
+  max-width: 17ch;
+  color: var(--text);
+  font-family: var(--font-primary);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.08;
 }
 
 .about-highlight-card p,
