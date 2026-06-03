@@ -32,7 +32,7 @@ function Dump() {
         <div className="dump-header">
           <div>
             <span className="dump-eyebrow">Moments We Keep</span>
-            <h2>Photo Dump from Our Community, Events, and Memories</h2>
+            <h2>Photo Dump From Our Community, Events, and Memories</h2>
           </div>
 
           <p>
