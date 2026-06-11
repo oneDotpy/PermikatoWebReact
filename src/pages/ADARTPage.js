@@ -1,11 +1,11 @@
-import AdART from "../components/AdART";
-import ContactFoot from "../components/ContactFoot";
+import Footer from "../components/layout/Footer";
+import AdART from "../features/guides/AdART";
 
 function AdARTPage() {
   return (
     <div className="Home">
       <AdART />
-      <ContactFoot />
+      <Footer />
     </div>
   );
 }

@@ -1,13 +1,13 @@
-import NewsPage from "../components/News";
-import ContactFoot from "../components/ContactFoot";
+import Footer from "../components/layout/Footer";
+import NewsList from "../features/news/NewsList";
 
-function NewsPageFoot() {
+function NewsPage() {
   return (
     <div className="Home">
-      <NewsPage />
-      <ContactFoot />
+      <NewsList />
+      <Footer />
     </div>
   );
 }
 
-export default NewsPageFoot;
+export default NewsPage;

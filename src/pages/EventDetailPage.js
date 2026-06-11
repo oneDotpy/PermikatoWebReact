@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { eventContent, SHEET_URL } from "../components/Events";
+import { eventContent, EVENTS_SHEET_URL } from "../features/home/data/events";
+import { getOptimizedImageSrc, restoreOriginalImage } from "../utils/images";
 import "./EventDetailPage.css";
 
 function EventDetailPage() {
@@ -11,7 +12,7 @@ function EventDetailPage() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    Papa.parse(SHEET_URL, {
+    Papa.parse(EVENTS_SHEET_URL, {
       download: true,
       header: true,
       skipEmptyLines: true,
@@ -56,9 +57,12 @@ function EventDetailPage() {
     <section className="event-detail-page">
       <div className="event-detail-hero">
         <img
-          src={event.image}
+          src={getOptimizedImageSrc(event.image)}
           alt={event.title}
           className="event-detail-hero-image"
+          decoding="async"
+          fetchpriority="high"
+          onError={(imageEvent) => restoreOriginalImage(imageEvent, event.image)}
         />
         <div className="event-detail-overlay" />
         <div className="event-detail-hero-content">

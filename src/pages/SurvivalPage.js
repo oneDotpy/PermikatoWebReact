@@ -1,11 +1,11 @@
-import SurvivalGuide from "../components/SurvivalGuide";
-import ContactFoot from "../components/ContactFoot";
+import Footer from "../components/layout/Footer";
+import SurvivalGuide from "../features/guides/SurvivalGuide";
 
 function SurvivalPage() {
   return (
     <div className="Home">
       <SurvivalGuide />
-      <ContactFoot />
+      <Footer />
     </div>
   );
 }
