@@ -1,4 +1,4 @@
-# PERMIKATO website
+# PERMIKATO Website
 
 The public website for PERMIKA Toronto. It is a React single-page application whose events, news, and executive profiles are loaded from published Google Sheets.
 
