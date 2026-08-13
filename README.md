@@ -2,7 +2,7 @@
 
 The public website for PERMIKA Toronto. It is a React single-page application whose events, news, and executive profiles are loaded from published Google Sheets.
 
-## Quick start
+## Quick Start
 
 Requirements: Node.js 18 or newer and npm.
 
@@ -21,7 +21,7 @@ After making changes, verify the production build:
 npm run build
 ```
 
-## Project map
+## Project Map
 
 ```text
 src/
@@ -45,7 +45,7 @@ public/
 
 `src/app/App.js` is the route table. The navbar and footer live in the application shell, so every route gets the same site layout.
 
-## Ownership and access
+## Ownership and Access
 
 The incoming web associate is responsible for routine website maintenance after handoff. PERMIKATO's organization administrators retain ownership and recovery access to every service.
 
@@ -68,24 +68,24 @@ Before completing the handoff:
 - Confirm the associate can deploy, update one Sheet row, and roll back a Vercel deployment.
 - Keep at least two PERMIKATO administrators on every critical account for recovery.
 
-## External links
+## External Links
 
 These are the stable external services referenced by the website. Event gallery links and news image URLs are managed inside their Sheets and are intentionally not duplicated here.
 
-### Data feeds
+### Data Feeds
 
 - Events: [published CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vQvx5UO9CVXqc06OmTxGJZTG90ml0CpElXPpNhYZtMdcF4yJJ4BjVUJUz76is0YzAf5RTwJpAI3a3jQ/pub?output=csv)
 - Executives: [published CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vRah_tCFZe8QB6HJ14l1K5qym0P4qADtwvtHHdzApUT49Tc8AioJUv7LohNFn6guL-G-QOcSWbyMVGV/pub?output=csv)
 - News: [published CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vTl5Lf7ZrC8xKCeXSfHuA-4KSYWu2Iz3KXQFP2KtAytBIObOkS4HmS7t_d7tYFT61LHzdDTHx44OslS/pub?output=csv)
 
-### Membership and community
+### Membership and Community
 
 - [Membership application Form](https://docs.google.com/forms/d/e/1FAIpQLSfiITgSGltBr0DSf6GkNlid6dp1KhVoumtZU9iEKexg7_nfAw/viewform?usp=header)
 - [Member WhatsApp group](https://chat.whatsapp.com/EzJvTS4xRgT3OFEtybw5dS)
 - [PERMIKATO Linktree](https://linktr.ee/permikatoronto)
 - [Lapor Diri / Peduli WNI](https://peduliwni.kemlu.go.id/beranda.html)
 
-### PERMIKATO accounts
+### PERMIKATO Accounts
 
 - Email: [permikato@gmail.com](mailto:permikato@gmail.com)
 - [Instagram](https://www.instagram.com/permikato/)
@@ -94,7 +94,7 @@ These are the stable external services referenced by the website. Event gallery 
 - [YouTube](https://youtube.com/@permikatoronto?si=Qf2cLMmPe3YX5Fq0)
 - [LinkedIn](https://www.linkedin.com/company/permika-toronto/)
 
-### Partner student associations
+### Partner Student Associations
 
 - [UTISA](https://www.instagram.com/uoftisa/)
 - [IDNSA UTSC](https://www.instagram.com/idnsautsc/)
@@ -106,7 +106,7 @@ These are the stable external services referenced by the website. Event gallery 
 
 The site also loads the Montserrat font from [Google Fonts](https://fonts.google.com/specimen/Montserrat).
 
-## Updating content
+## Updating Content
 
 Most routine content changes do not require a deployment.
 
@@ -130,13 +130,13 @@ Keep each sheet published as CSV. Column names are case-sensitive.
 - Add each new term and its accepted job titles to `DIVISION_RULES` in `src/features/executives/data.js`.
 - A Sheet title must exactly match a title in those rules or the person will not be shown.
 
-### Guides and static images
+### Guides and Static Images
 
 - Replace the PDF and cover preview in `public/assets/guides/` to update the current survival guide. Update their labels and filenames in `SurvivalGuide.js` when the edition changes.
 - `public/assets/` is for direct URLs used by Sheets or downloads. Use `src/assets/` only for images imported by a component.
 - Compress images before committing them and delete superseded files in the same change.
 
-## Adding a page
+## Adding a Page
 
 1. Add the feature component under `src/features/<feature>/`.
 2. Register its route in `src/app/App.js`.
