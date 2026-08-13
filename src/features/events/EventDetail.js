@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { eventContent, EVENTS_SHEET_URL } from "../features/home/data/events";
-import { getOptimizedImageSrc, restoreOriginalImage } from "../utils/images";
-import "./EventDetailPage.css";
+import { eventContent, EVENTS_SHEET_URL } from "./data";
+import { getOptimizedImageSrc, restoreOriginalImage } from "../../utils/images";
+import "./EventDetail.css";
 
-function EventDetailPage() {
+function EventDetail() {
   const { slug } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
@@ -112,4 +112,4 @@ function EventDetailPage() {
   );
 }
 
-export default EventDetailPage;
+export default EventDetail;

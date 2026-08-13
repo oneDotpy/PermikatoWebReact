@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Banner.css';
 import homeLogo from "../../../assets/images/brand/home_logo.png";
-import heroImage from "../../../assets/images/events/welpar.jpg";
 
 function Banner() {
   return (
     <section id="home" className="banner-section">
       <img
-        src={heroImage}
+        src="/assets/events/welpar.jpg"
         alt="PERMIKATO community gathering"
         className="banner-background-image"
         loading="eager"
@@ -27,9 +27,9 @@ function Banner() {
           </p>
 
           <div className="banner-actions">
-            <a href="/become-member" className="student-button">
+            <Link to="/become-member" className="student-button">
               New Student Guide
-            </a>
+            </Link>
             <a href="#events" className="banner-secondary-link">
               See Events
             </a>

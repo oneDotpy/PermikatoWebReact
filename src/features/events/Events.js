@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 import { useNavigate } from "react-router-dom";
 import "./Events.css";
-import { eventContent, EVENTS_SHEET_URL } from "../data/events";
-import { getOptimizedImageSrc, restoreOriginalImage } from "../../../utils/images";
+import { eventContent, EVENTS_SHEET_URL } from "./data";
+import { getOptimizedImageSrc, restoreOriginalImage } from "../../utils/images";
 
 function Events() {
   const [events, setEvents] = useState([]);
@@ -35,9 +35,7 @@ function Events() {
 
         setEvents(cleaned);
       },
-      error: (error) => {
-        console.error("Failed to load events CSV:", error);
-      },
+      error: (error) => console.error("Failed to load events CSV:", error),
     });
   }, []);
 
@@ -46,10 +44,7 @@ function Events() {
   const handleEventClick = (event) => {
     if (event.slug) {
       navigate(`/events/${event.slug}`, { state: { event } });
-      return;
-    }
-
-    if (event.galleryLink) {
+    } else if (event.galleryLink) {
       window.open(event.galleryLink, "_blank", "noopener,noreferrer");
     }
   };
@@ -62,7 +57,6 @@ function Events() {
             <span className="events-eyebrow">What We Do</span>
             <h2>Events That Bring Indonesian Students Together in Toronto</h2>
           </div>
-
           <p>
             From welcoming new students and building friendships to exploring
             ideas, culture, and community, our programs are designed to feel
@@ -76,7 +70,6 @@ function Events() {
               <span className="events-chip">Featured Event</span>
               <h3>{featuredEvent.title}</h3>
               <p>{featuredEvent.description}</p>
-
               <div className="events-featured-actions">
                 <button
                   type="button"
@@ -85,7 +78,6 @@ function Events() {
                 >
                   {featuredEvent.slug ? "Read Full Story" : "Open Gallery"}
                 </button>
-
                 {featuredEvent.galleryLink && (
                   <a
                     className="events-secondary-button"
@@ -98,7 +90,6 @@ function Events() {
                 )}
               </div>
             </div>
-
             <div className="events-featured-image-wrap">
               <img
                 src={getOptimizedImageSrc(featuredEvent.image)}
@@ -113,10 +104,10 @@ function Events() {
         )}
 
         <div className="events-grid">
-          {events.map((event, index) => (
+          {events.map((event) => (
             <article
               className="event-card"
-              key={`${event.title}-${index}`}
+              key={event.title}
               onClick={() => handleEventClick(event)}
             >
               <div className="event-card-image-wrap">
@@ -130,30 +121,25 @@ function Events() {
                 />
                 <span className="event-card-chip">{event.tag}</span>
               </div>
-
               <div className="event-card-body">
                 <h3>{event.title}</h3>
                 <p>{event.description}</p>
-
                 <div className="event-card-footer">
                   <span className="event-card-link">
                     {event.slug ? "Read Full Story" : "View Gallery"}
                   </span>
-
                   {event.galleryLink ? (
                     <a
                       href={event.galleryLink}
                       target="_blank"
                       rel="noreferrer"
                       className="event-card-gallery"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(clickEvent) => clickEvent.stopPropagation()}
                     >
                       Gallery ↗
                     </a>
                   ) : (
-                    <span className="event-card-gallery muted">
-                      No Gallery Yet
-                    </span>
+                    <span className="event-card-gallery muted">No Gallery Yet</span>
                   )}
                 </div>
               </div>

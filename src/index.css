@@ -18,7 +18,10 @@
   --radius-md: 8px;
 }
 
-/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-primary);
   margin: 0;
@@ -31,7 +34,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Additional styles for scrollbars, if needed */
+section {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-margin-top: 84px;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

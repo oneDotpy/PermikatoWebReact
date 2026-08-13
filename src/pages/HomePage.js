@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import "../app/App.css";
 import Banner from "../features/home/components/Banner";
 import About from "../features/home/components/About";
 import Isa from "../features/home/components/Isa";
-import Events from "../features/home/components/Events";
+import Events from "../features/events/Events";
 import PhotoDump from "../features/home/components/PhotoDump";
-import Footer from "../components/layout/Footer";
 
 function HomePage() {
   const location = useLocation();
@@ -57,7 +55,6 @@ function HomePage() {
       <Isa />
       <Events />
       <PhotoDump />
-      <Footer />
     </div>
   );
 }

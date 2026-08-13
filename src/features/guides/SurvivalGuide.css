@@ -7,305 +7,149 @@
   --text: #231815;
   --text-strong: #101828;
   --muted: #6b5f5b;
-  --brand: var(--color-brand);
-  --brand-dark: var(--color-brand-dark);
   --line: rgba(154, 22, 22, 0.14);
-  --shadow: none;
-  --surface: rgba(255, 255, 255, 0.72);
 
-  position: relative;
   min-height: 100vh;
   padding: 7rem 1.5rem 5rem;
   background: var(--color-paper-soft);
   color: var(--text);
   font-family: var(--font-primary);
-  overflow: hidden;
-}
-
-.survival-page::before,
-.survival-page::after {
-  content: none;
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  pointer-events: none;
-  opacity: 0.15;
-}
-
-.survival-page::before {
-  width: 260px;
-  height: 260px;
-  background: rgba(154, 22, 22, 0.2);
-  top: 60px;
-  left: -80px;
-}
-
-.survival-page::after {
-  width: 320px;
-  height: 320px;
-  background: rgba(112, 11, 11, 0.14);
-  right: -100px;
-  bottom: 40px;
 }
 
 .survival-shell {
-  position: relative;
-  z-index: 1;
   width: min(1180px, 100%);
   margin: 0 auto;
 }
 
 .survival-hero {
-  text-align: center;
   margin-bottom: 2.75rem;
+  text-align: center;
+}
+
+.survival-eyebrow,
+.survival-chip {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  color: var(--color-brand);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .survival-eyebrow {
-  display: inline-block;
   margin-bottom: 0.9rem;
-  padding: 0.55rem 0.95rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.68);
   border: 1px solid var(--line);
-  color: var(--brand);
-  font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.survival-chip {
+  background: rgba(154, 22, 22, 0.08);
 }
 
 .survival-title {
   margin: 0;
-  font-size: clamp(2.4rem, 5vw, 4.8rem);
-  line-height: 1.02;
-  font-weight: 600;
-  font-family: var(--font-primary);
   color: var(--text-strong);
-  letter-spacing: 0;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 600;
+  line-height: 1.02;
 }
 
 .survival-title span {
-  color: var(--brand);
+  color: var(--color-brand);
 }
 
 .survival-description {
   width: min(820px, 100%);
   margin: 1rem auto 0;
+  color: var(--muted);
   font-size: clamp(1.12rem, 1.35vw, 1.24rem);
   line-height: 1.74;
-  color: var(--muted);
 }
 
 .survival-main-card {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 1.5rem;
+  margin-bottom: 2rem;
   padding: 1.5rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .survival-copy {
-  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.survival-chip {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(154, 22, 22, 0.08);
-  color: var(--brand);
-  font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  padding: 1.2rem;
 }
 
 .survival-copy h2,
-.survival-archive-header h2,
-.survival-empty-state h3,
-.survival-edition-item h4 {
-  font-family: var(--font-primary);
-  color: var(--text);
-}
-
-.survival-copy h2,
-.survival-archive-header h2 {
+.survival-archive-card h2 {
   margin: 1rem 0 0.7rem;
   font-size: clamp(1.8rem, 3vw, 2.7rem);
-  line-height: 1.1;
   font-weight: 500;
+  line-height: 1.1;
 }
 
 .survival-copy p,
-.survival-archive-header p,
-.survival-empty-state p,
-.survival-edition-item p {
+.survival-archive-card p {
   margin: 0;
   color: var(--muted);
   font-size: 1.1rem;
   line-height: 1.72;
 }
 
-.survival-download-button {
+.survival-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.survival-download-button,
+.survival-secondary-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1.4rem;
-  padding: 0.95rem 1.2rem;
   width: fit-content;
+  padding: 0.95rem 1.2rem;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
-  color: #ffffff;
-  text-decoration: none;
   font-weight: 500;
-  box-shadow: 0 16px 30px rgba(112, 11, 11, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.survival-download-button {
+  background: var(--color-brand);
+  color: #fff;
 }
 
 .survival-download-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 32px rgba(112, 11, 11, 0.24);
-  opacity: 0.98;
+  background: var(--color-brand-dark);
+}
+
+.survival-secondary-button {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
 }
 
 .survival-pdf-wrap {
-  position: relative;
+  min-height: 650px;
   overflow: hidden;
-  display: block;
-  padding: 0;
-  border-radius: var(--radius-md);
   border: 1px solid var(--line);
-  background: var(--brand-dark);
-  min-height: 650px;
-}
-
-.survival-booklet {
-  position: relative;
-  min-height: 650px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2.5vw, 2rem) 5.6rem;
   border-radius: var(--radius-md);
-  background:
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.08), transparent 36%),
-    linear-gradient(180deg, #961212 0%, #700b0b 56%, #4f0707 100%);
-  box-shadow: inset 0 -90px 90px rgba(49, 4, 4, 0.62);
+  background: var(--color-brand-dark);
 }
 
-.survival-booklet-stage {
-  min-height: 0;
-  display: grid;
-  place-items: center;
-}
-
-.survival-pdf-preview {
+.survival-preview {
   display: block;
-  width: min(100%, 430px);
-  height: auto;
-  border-radius: var(--radius-sm);
-  background: #f7f1e7;
-  box-shadow: 0 24px 42px rgba(3, 8, 14, 0.36);
-  transition: opacity 0.18s ease;
-}
-
-.survival-booklet-controls {
-  position: absolute;
-  left: clamp(1rem, 2.5vw, 2rem);
-  right: clamp(1rem, 2.5vw, 2rem);
-  bottom: 1.35rem;
-  color: #fff;
-}
-
-.survival-booklet-progress {
-  height: 5px;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.45);
-}
-
-.survival-booklet-progress span {
-  display: block;
+  width: 100%;
   height: 100%;
-  border-radius: inherit;
-  background: #fff;
-  transition: width 0.2s ease;
-}
-
-.survival-control-row {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.9rem, 2vw, 1.4rem);
-}
-
-.survival-control-row button {
-  width: 2.4rem;
-  height: 2.4rem;
-  display: inline-grid;
-  place-items: center;
-  border: 0;
-  border-radius: var(--radius-sm);
-  background: transparent;
-  color: #fff;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: background-color 0.18s ease, opacity 0.18s ease;
-}
-
-.survival-control-row button:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.survival-control-row button:disabled {
-  cursor: not-allowed;
-  opacity: 0.35;
-}
-
-.survival-page-count {
-  min-width: 5.4rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.14rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.survival-fullscreen-button {
-  margin-left: auto;
-  font-size: 1.45rem !important;
-}
-
-.survival-viewer-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  display: grid;
-  place-items: center;
-  padding: clamp(1rem, 3vw, 2rem);
-  background: rgba(49, 4, 4, 0.86);
-  backdrop-filter: blur(8px);
-}
-
-.survival-booklet.is-fullscreen {
-  width: min(980px, 100%);
-  height: min(92vh, 980px);
-  min-height: 0;
-}
-
-.survival-booklet.is-fullscreen .survival-pdf-preview {
-  width: min(100%, 520px);
-  max-height: calc(92vh - 9rem);
+  min-height: 650px;
   object-fit: contain;
 }
 
@@ -314,97 +158,11 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.72);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-
-.survival-archive-header {
-  margin-bottom: 1.5rem;
-}
-
-.survival-empty-state {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.2rem 1.25rem;
-  border-radius: var(--radius-md);
-  border: 1px dashed rgba(154, 22, 22, 0.2);
-  background: rgba(255, 255, 255, 0.56);
-}
-
-.survival-empty-icon {
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  background: rgba(154, 22, 22, 0.08);
-  color: var(--brand);
-  font-size: 1.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.survival-empty-state h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.survival-edition-list {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.survival-edition-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.2rem 1.25rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.78);
-}
-
-.survival-edition-item h4 {
-  margin: 0 0 0.35rem;
-  font-size: 1.15rem;
-  font-weight: 500;
-}
-
-.survival-secondary-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.9rem 1.1rem;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.88);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  white-space: nowrap;
-}
-
-.survival-secondary-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 26px rgba(35, 24, 21, 0.08);
 }
 
 @media (max-width: 1024px) {
   .survival-main-card {
     grid-template-columns: 1fr;
-  }
-
-  .survival-pdf-wrap {
-    min-height: 560px;
-  }
-
-  .survival-booklet {
-    min-height: 560px;
   }
 }
 
@@ -415,7 +173,6 @@
 
   .survival-main-card,
   .survival-archive-card {
-    border-radius: 24px;
     padding: 1.1rem;
   }
 
@@ -423,37 +180,19 @@
     padding: 0.6rem;
   }
 
-  .survival-description,
   .survival-copy p,
-  .survival-archive-header p,
-  .survival-empty-state p,
-  .survival-edition-item p {
+  .survival-archive-card p {
     font-size: 1rem;
-    line-height: 1.75;
   }
 
-  .survival-pdf-wrap {
+  .survival-pdf-wrap,
+  .survival-preview {
     min-height: 440px;
-    border-radius: 18px;
   }
 
-  .survival-booklet {
-    min-height: 440px;
-    padding: 1rem 0.8rem 5rem;
-  }
-
-  .survival-pdf-preview {
-    width: min(100%, 340px);
-  }
-
-  .survival-edition-item,
-  .survival-empty-state {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .survival-secondary-button,
-  .survival-download-button {
+  .survival-actions,
+  .survival-download-button,
+  .survival-secondary-button {
     width: 100%;
   }
 }

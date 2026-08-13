@@ -1,4 +1,3 @@
-import welpar from "../../../assets/images/events/welpar.jpg";
 import dump1 from "../../../assets/images/gallery/dump1.JPG";
 import dump2 from "../../../assets/images/gallery/dump2.JPG";
 import dump3 from "../../../assets/images/gallery/dump3.jpg";
@@ -10,7 +9,7 @@ import dump11 from "../../../assets/images/gallery/dump11.jpg";
 import dump12 from "../../../assets/images/gallery/dump12.jpg";
 
 const photoDumpImages = [
-  { image: welpar, alt: "PERMIKATO photo memory 1" },
+  { image: "/assets/events/welpar.jpg", alt: "PERMIKATO photo memory 1" },
   { image: dump1, alt: "PERMIKATO photo memory 2" },
   { image: dump2, alt: "PERMIKATO photo memory 3" },
   { image: dump3, alt: "PERMIKATO photo memory 4" },

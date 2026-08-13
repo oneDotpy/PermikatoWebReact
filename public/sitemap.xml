@@ -2,33 +2,38 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://www.permikato.com/</loc>
+    <loc>https://permikato.com/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.permikato.com/team</loc>
+    <loc>https://permikato.com/team</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.permikato.com/adart</loc>
+    <loc>https://permikato.com/adart</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.permikato.com/news</loc>
+    <loc>https://permikato.com/news</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.permikato.com/survival-guide</loc>
+    <loc>https://permikato.com/survival-guide</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.permikato.com/faq</loc>
+    <loc>https://permikato.com/faq</loc>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://permikato.com/become-member</loc>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

@@ -1,6 +1,5 @@
 import React from 'react';
 import './About.css';
-import aboutImage from "../../../assets/images/events/spookseek.JPG";
 
 function About() {
   return (
@@ -26,7 +25,7 @@ function About() {
         <div className="about-content-grid">
           <figure className="about-image-panel">
             <img
-              src={aboutImage}
+              src="/assets/events/spookseek.jpg"
               alt="PERMIKATO students at a community event"
               loading="lazy"
               decoding="async"

@@ -42,7 +42,7 @@ const socials = [
   {
     name: "YouTube",
     icon: youtubeLogo,
-    url: "https://www.youtube.com/@permikatoronto",
+    url: "https://youtube.com/@permikatoronto?si=Qf2cLMmPe3YX5Fq0",
   },
   {
     name: "LinkedIn",
@@ -136,7 +136,7 @@ function Footer() {
           </div>
 
           <div className="contact-foot-bottomrow">
-            <p>© 2025 PERMIKATO. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} PERMIKATO. All rights reserved.</p>
             <p>Made for the Indonesian Student Community in Toronto.</p>
           </div>
         </div>
