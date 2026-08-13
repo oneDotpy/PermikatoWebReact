@@ -42,7 +42,7 @@ const socials = [
   {
     name: "YouTube",
     icon: youtubeLogo,
-    url: "https://youtube.com/@permikatoronto?si=Qf2cLMmPe3YX5Fq0",
+    url: "https://www.youtube.com/@permikatoronto",
   },
   {
     name: "LinkedIn",

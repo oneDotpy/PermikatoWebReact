@@ -91,7 +91,7 @@ These are the stable external services referenced by the website. Event gallery 
 - [Instagram](https://www.instagram.com/permikato/)
 - [Threads](https://www.threads.net/@permikato)
 - [TikTok](https://www.tiktok.com/@permikato)
-- [YouTube](https://youtube.com/@permikatoronto?si=Qf2cLMmPe3YX5Fq0)
+- [YouTube](https://www.youtube.com/@permikatoronto)
 - [LinkedIn](https://www.linkedin.com/company/permika-toronto/)
 
 ### Partner Student Associations

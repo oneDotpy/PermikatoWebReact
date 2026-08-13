@@ -42,7 +42,7 @@ function Contact() {
     { icon: instagramLogo, alt: "Instagram", url: "https://www.instagram.com/permikato/" },
     { icon: threadsLogo, alt: "Threads", url: "https://www.threads.net/@permikato" },
     { icon: tiktokLogo, alt: "TikTok", url: "https://www.tiktok.com/@permikato" },
-    { icon: youtubeLogo, alt: "YouTube", url: "https://youtube.com/@permikatoronto?si=Qf2cLMmPe3YX5Fq0" },
+    { icon: youtubeLogo, alt: "YouTube", url: "https://www.youtube.com/@permikatoronto" },
     { icon: linkedinLogo, alt: "LinkedIn", url: "https://www.linkedin.com/company/permika-toronto/" },
     { icon: emailLogo, alt: "Email", url: "mailto:permikato@gmail.com" },
   ];
