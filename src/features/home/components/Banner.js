@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Banner.css';
-import homeLogo from "../../../assets/images/brand/home_logo.png";
+import homeLogo from "../../../assets/images/brand/home_logo_white_filled.png";
 
 function Banner() {
   return (
