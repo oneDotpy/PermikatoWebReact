@@ -37,7 +37,7 @@ function About() {
             <div className="about-highlight-top">
               <span className="about-mini-label">Community at a Glance</span>
               <div className="about-stat-lockup">
-                <strong>160+</strong>
+                <strong>500+</strong>
                 <h3>Students Across 9 Colleges and Universities</h3>
               </div>
             </div>
@@ -45,7 +45,7 @@ function About() {
             <p>
               Perhimpunan Mahasiswa Indonesia di Kanada (Permika) Toronto is an
               Indonesian students association in Toronto, Canada. Based on our
-              database of registered members, we accommodate 160+ Indonesian
+              database of registered members, we accommodate 500+ Indonesian
               students dispersed in 9 colleges and universities in the Greater
               Toronto Area.
             </p>
