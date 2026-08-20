@@ -24,7 +24,6 @@ function Events() {
 
             return {
               ...event,
-              tag: extra.tag || "Event",
               slug: extra.slug || null,
               description:
                 event.description?.trim() ||
@@ -119,7 +118,6 @@ function Events() {
                   decoding="async"
                   onError={(imageEvent) => restoreOriginalImage(imageEvent, event.image)}
                 />
-                <span className="event-card-chip">{event.tag}</span>
               </div>
               <div className="event-card-body">
                 <h3>{event.title}</h3>

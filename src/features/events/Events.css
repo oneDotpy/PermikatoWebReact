@@ -32,8 +32,7 @@
 }
 
 .events-eyebrow,
-.events-chip,
-.event-card-chip {
+.events-chip {
   display: inline-flex;
   width: fit-content;
   color: var(--brand);
@@ -197,7 +196,6 @@
 }
 
 .event-card-image-wrap {
-  position: relative;
   margin-top: 1rem;
 }
 
@@ -207,15 +205,6 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
   filter: saturate(0.92);
-}
-
-.event-card-chip {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  padding: 0.38rem 0.55rem;
-  border-radius: var(--radius-sm);
-  background: rgba(246, 241, 234, 0.94);
 }
 
 .event-card-body {
