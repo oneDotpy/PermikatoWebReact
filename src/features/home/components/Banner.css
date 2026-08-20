@@ -128,6 +128,7 @@
 .banner-logo-lockup {
   display: flex;
   justify-content: flex-end;
+  transform: translateY(calc(50% - 36px));
 }
 
 #interactive-logo {
@@ -150,6 +151,7 @@
 
   .banner-logo-lockup {
     justify-content: flex-start;
+    transform: none;
   }
 
   #interactive-logo {
@@ -172,8 +174,12 @@
   }
 
   .banner-actions {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+  }
+
+  .banner-logo-lockup {
+    justify-content: center;
   }
 
   .student-button {
