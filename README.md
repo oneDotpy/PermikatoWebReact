@@ -7,7 +7,7 @@ The public website for PERMIKA Toronto. It is a React single-page application wh
 Requirements: Node.js 18 or newer and npm.
 
 ```bash
-git clone git@github.com:oneDotpy/PermikatoWebReact.git
+git clone https://github.com/permikato/PermikatoWebReact.git
 cd PermikatoWebReact
 npm ci
 npm start
@@ -51,9 +51,9 @@ The incoming web associate is responsible for routine website maintenance after 
 
 | Resource | Permanent owner | Associate access |
 | --- | --- | --- |
-| [GitHub repository](https://github.com/oneDotpy/PermikatoWebReact) | PERMIKATO GitHub administrators | Write access |
+| [GitHub repository](https://github.com/permikato/PermikatoWebReact.git) | PERMIKATO GitHub administrators | Write access |
 | [permikato.com](https://permikato.com/) and DNS | PERMIKATO domain administrator | DNS access when required |
-| [Vercel project](https://vercel.com/dashboard) | PERMIKATO Vercel project owner | Project member with deployment access |
+| [Vercel project](https://vercel.com/permika-toronto/permikato-web-react) | PERMIKATO Vercel project owner | Project member with deployment access |
 | Three Google Sheets listed below | PERMIKATO Google Drive owners | Editor access |
 | Membership Form and WhatsApp group | PERMIKATO membership administrators | Form editor and group admin access |
 | Linktree, email, and social profiles | PERMIKATO communications administrators | Role-based account access |
@@ -72,11 +72,13 @@ Before completing the handoff:
 
 These are the stable external services referenced by the website. Event gallery links and news image URLs are managed inside their Sheets and are intentionally not duplicated here.
 
-### Data Feeds
+### Google Sheets
 
-- Events: [published CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vQvx5UO9CVXqc06OmTxGJZTG90ml0CpElXPpNhYZtMdcF4yJJ4BjVUJUz76is0YzAf5RTwJpAI3a3jQ/pub?output=csv)
-- Executives: [published CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vRah_tCFZe8QB6HJ14l1K5qym0P4qADtwvtHHdzApUT49Tc8AioJUv7LohNFn6guL-G-QOcSWbyMVGV/pub?output=csv)
-- News: [published CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vTl5Lf7ZrC8xKCeXSfHuA-4KSYWu2Iz3KXQFP2KtAytBIObOkS4HmS7t_d7tYFT61LHzdDTHx44OslS/pub?output=csv)
+- Events: [open source Google Sheet](https://docs.google.com/spreadsheets/d/1DwI_eVSsEIVzYVtAJphuquwb1zqLmGXfIczM-AHqnyk/edit?usp=sharing)
+- Executives: [open source Google Sheet](https://docs.google.com/spreadsheets/d/1LP40YNxlsQ7yIClb3KTVhVJs3QlrDWCtsQpfFNUCfds/edit?usp=sharing)
+- News: [open source Google Sheet](https://docs.google.com/spreadsheets/d/1XO9PMIEKuStoOY_Ye5X4CiejnrVOBByosjs02wRW88I/edit?usp=sharing)
+
+Use the source Google Sheets above for dynamic content updates. Ask a PERMIKATO Google Drive owner for editor access if needed.
 
 ### Membership and Community
 
